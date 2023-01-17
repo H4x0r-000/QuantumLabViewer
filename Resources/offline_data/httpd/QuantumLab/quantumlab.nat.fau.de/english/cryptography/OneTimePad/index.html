@@ -1,0 +1,213 @@
+<html>
+<!-- Mirrored from quantumlab.nat.fau.de/english/cryptography/OneTimePad/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Nov 2022 15:52:01 GMT -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"><!-- saved from url=(0022)http://internet.e-mail -->
+
+
+<title>One-Time-Pad</title>
+
+<style type="text/css">
+<!--
+.Stil22 {
+	color: #00CC00;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: medium;
+}
+.Stil32 {
+	color: #0000FF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: medium;
+}
+.Stil33 {
+	color: #FF0000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: medium;
+}
+-->
+</style>
+<script src="../../Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+<link href="../../../Frames/Stylesheet.css" rel="stylesheet" type="text/css">
+<script src="../../frames/Frameset_nachladen.js" type="text/javascript"></script>
+</head><body onLoad='checkFrameset()'>
+<p align="center" class="ueberschrift"><br>
+  Quantum Cryptography Chapter 1:<br>
+  Encoding with the One-Time-Pad</p>
+<p class="Stil8" align="left">&nbsp;</p>
+<p class="text-normal" align="justify">Data transmission is nowadays usually
+carried out in digital form. Digital news consist of the binary digits
+1 and 0. Each letter of a message is initially fractionalised into
+binary digits, then transmitted via the internet and finally displayed
+again as a letter  to the receiver. A spy could intercept this binary
+message, read it and forward it to the real receiver. The receiver has
+no control whatsoever over whether the message has already been read or
+even manipulated. <br>
+On the following page, we present a cryptography system which is 100%
+secure, provided all rules are observed. This system does not have
+anything to do with quantum physics as yet. Quantum physics are needed
+later, when the secret code is to be generated absolutely
+coincidentally and transferred absolutely safely. </p>
+<p class="Stil8" align="justify">&nbsp;</p>
+<p class="text-ueberschrift" align="left">Basics of the One-Time-Pad</p>
+<blockquote>
+  <p align="justify" class="text-normal"> In order to
+transmit a message securely, the sender as well as the receiver need a
+secret key code. The sender encodes the message with the secret key code. The
+encoded message is then transmitted publicly, e. g. via the internet.
+The receiver decodes the encoded message with his own secret key code, and
+thus gets the real message. Although a spy can intercept the encoded
+message unnoticed, he lacks the secret key code that is needed to decypher
+the message. </p>
+</blockquote>
+<blockquote>
+  <p align="justify" class="text-normal">So as to
+transmit a message securely, the sender (Alice) and the receiver (Bob)
+of the message both need an exactly identical but secret key code. For
+digital transmission, this code and the real message must be
+both binary and the code must consist of random numbers made up of 1 and 0. Alice and Bob
+must initially meet in person and without witnesses in order to
+generate the secret key code and copy it for each one of them. It is only
+when Alice and Bob are in possession of the secret code that the actual
+encoding and transmission of the confidential message can begin. For
+the encoding, the real <span class="Stil32">message</span> is added binarily to the <span class="Stil33">code</span>. For binary addition, the following four calculation rules apply:</p>
+  <table width="100%" border="0">
+    <tbody><tr>
+      <td width="26%"><div class="Stil68" align="center"><span class="Stil32">0</span>+<span class="Stil33">0</span>=<span class="Stil47"><span class="Stil22">0</span></span></div></td>
+      <td width="26%"><div class="Stil68" align="center"><span class="Stil32">1</span>+<span class="Stil33">1</span>=<span class="Stil22">0</span></div></td>
+      <td width="24%"><div class="Stil68" align="center"><span class="Stil32">1</span>+<span class="Stil33">0</span>=<span class="Stil22">1</span></div></td>
+      <td width="24%"><div class="Stil68" align="center"><span class="Stil32">0</span>+<span class="Stil33">1</span>=<span class="Stil22">1</span></div></td>
+    </tr>
+  </tbody></table>
+  <p class="text-normal" align="justify">The <span class="Stil76">encoded message</span>
+is then transmitted publicly and readable for everyone, e. g. on a
+postcard or via the internet. A spy cannot get any useful information from the
+message without the code. At the receiver's end, the encoded text is
+added binarily to the identical code, and thus the receiver gets the
+real <span class="Stil73">message</span>:</p>
+  <table width="100%" border="0">
+    <tbody><tr>
+      <td class="Stil64" width="26%"><div class="Stil24" align="center"><span class="Stil47"><span class="Stil26">0</span></span><span class="Stil25">+<span class="Stil33">0</span>=<span class="Stil32">0</span></span></div></td>
+      <td class="Stil64" width="25%"><div class="Stil25" align="center"><span class="Stil22">0</span>+<span class="Stil33">1</span>=<span class="Stil32">1</span></div></td>
+      <td class="Stil64" width="24%"><div class="Stil24" align="center"><span class="Stil32"><span class="Stil26">1</span></span><span class="Stil30"><span class="Stil23">+</span>0</span><span class="Stil25">=<span class="Stil32">1</span></span></div></td>
+      <td class="Stil64" width="25%"><div class="Stil24" align="center"><span class="Stil32"><span class="Stil26">1</span></span><span class="Stil25">+<span class="Stil33">1</span>=<span class="Stil32">0</span></span></div></td>
+    </tr>
+  </tbody></table>
+  <p class="text-normal" align="justify">In
+the following animation, the encoding system is shown in more detail
+using an example. In this example, a message is encoded, transmitted
+and decoded by the receiver with 5 Bits. 5 Bits are enough to transmit
+32 different figures or characters. This number is sufficient e. g. for
+the alphabet: A: 00000, B: 00001, C: 00010, D: 00011, E: 00100, F:
+00101, G: 00111, H: 01000, ....</p>
+  <p class="Stil9">&nbsp;</p>
+</blockquote>
+<table width="100%" border="0">
+  <tbody><tr>
+    <td class="Stil66"><div align="center">
+      <span class="text-normal">
+      <script type="text/javascript">
+AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0','width','910','height','412','src','QKD-E-Erkl','quality','high','pluginspage','http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash','movie','QKD-E-Erkl' ); //end AC code
+      </script>
+      <noscript> 
+      <object
+classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0"
+width="910" height="412"> 
+        <param name="movie" value="QKD-E-Erkl.swf"> 
+        <param
+name="quality" value="high"> 
+        <embed src="QKD-E-Erkl.swf" quality="high"
+pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"
+type="application/x-shockwave-flash" width="910" height="412"></embed>
+      </object>
+      </noscript>
+      </span></div></td>
+  </tr>
+</tbody></table>
+<p class="Stil9">&nbsp;</p>
+<p class="Stil9">&nbsp;</p>
+<p class="Stil9">&nbsp;</p>
+<p class="text-ueberschrift">The secret code in the One-Time-Pad:</p>
+<blockquote>
+  <p class="text-normal" align="justify">The cryptography
+system described above was developed in 1918 by the cryptologist G.
+Vernam and called the "One-Time-Pad": The key code is generated and only
+written down on two pads for Alice and Bob. Each page with the code can
+only be used once. In times of the Cold War, the key codes were printed on
+small pads and sent on by messengers. If the messenger did not
+arrive at his destination, the "enemy" had only got hold of the key code.
+As this code had nothing to do with the real message, it was of no value
+to the "enemy". The real message was then encoded with a different
+code. The obvious danger of this method lies in the possibility that
+the code could be copied unnoticed by the messenger while he was on his
+way. If and when that happened, the encoded message could be decoded.</p>
+  <p class="text-normal" align="justify"> The One-Time-Pad system is 100% secure [Sha49], if the following requirements concerning the key code are met::<br>
+  </p>
+  <div class="Stil23" align="justify">
+    <div class="Stil8" align="left"></div>
+    <ul><li>
+        <div class="text-normal" align="left"><span class="text-ueberschrift">Requirement 1:</span> The code must only be used once.</div>
+      </li>
+      <li>
+        <div class="text-normal" align="left"><span class="text-ueberschrift">Requirement 2:</span> The code must be at least the same length as the real message. </div>
+      </li>
+      <li>
+        <div class="text-normal" align="left"><span class="text-ueberschrift">Requirement 3:</span> The code must be chosen unpredictably at random</div>
+      </li>
+      <li>
+        <div class="text-normal" align="left"><span class="text-ueberschrift">Requirement 4:</span> The code must be known to no more than two persons.</div>
+      </li>
+    </ul>
+  </div>
+  <p class="text-ueberschrift" align="justify">Which requirements can be met so far? </p>
+  <p class="text-normal" align="justify">For
+requirement 1, the sender and the receiver are equally responsible.
+Each key code must be destroyed immediately after one-time use so that it
+cannot be used again. Requirement 2 can be complied with by the sender.
+He must only encode a message if he has sufficient code bits at his
+disposal.<br>
+    <br>
+    For Requirement 3, random numbers are needed in
+order to generate the code. Random numbers can e. g. be created with
+the help of a computer. This computer randomness is, however, generated via
+a calculation. The basis for this calculation is a start value which recurs
+infrequently. The "randomness" of the computer figure therefore only
+depends on the complexity of the calculation rule and on the start
+value. Computer-generated random numbers are therefore called "pseudo
+random" and are not suitable for the completely random generation of a
+code. <br>
+  <br> 
+  Real random numbers can be generated with
+the aid of quantum physics. If a single photon hits a beam splitter, it
+is either reflected (binary 1) or transmitted (binary 0) completely
+at random
+(pic. 1). There is no mathematical rule behind this process. Such a
+quantum random generator is described in detail with experiments in the
+chapter <a href="../../random/index.html">Quantum random</a>. </p>
+  <p class="text-normal" align="justify"><br>
+      <br>
+  </p>
+  <p class="text-normal" align="center"><img src="Quantenzufall.jpg" width="358" height="104"></p>
+  <p class="text-normal" align="center">pic. 1: quantum random generator with announced single photon source</p>
+  <p class="Stil41" align="center">&nbsp;</p>
+  <p class="text-normal" align="justify">With
+the quantum random generator, requirement 3 can be met. Now, the
+random generated codes must be distributed to the sender and the
+receiver in a manner that ensures it is definitely only known to these
+two persons (requirement 4). With messengers, security is inevitably
+breached. Quantum physics again offers the ideal solution [<a href="../QCD-Start/index.html">forward</a>].</p>
+  <p class="Stil41" align="center">&nbsp;</p>
+</blockquote>
+<p class="Stil9" align="justify">&nbsp;</p>
+<p class="text-normal" align="left">To chapter 2: <a href="../QCD-Start/index.html">Code distribution with single photons</a> (school level)</p>
+<p class="text-normal" align="left"><a href="file:///C:/Dokumente und Einstellungen/Bronner/Lokale Einstellungen/Temporary Internet Files/Statistik/index.html"><br>
+</a>Back to <a href="../index.html">Overview</a></p>
+<p class="Stil9" align="left">&nbsp;</p>
+<p class="notizen" align="left">Author: P. Bronner, August 2008<br>
+  Translation: G. Murphy </p>
+<p class="Stil69" align="left">&nbsp;</p>
+<blockquote>&nbsp;</blockquote>
+<span class="text-normal"><img alt="" src="http://www.didaktik.physik.uni-erlangen.de/quantumlab/Homepagestatistik/aufruf.php?name=Kryptographie-QKD-Einfuerung-index.html&amp;lng=englisch"></span>
+</body>
+
+<!-- Mirrored from quantumlab.nat.fau.de/english/cryptography/OneTimePad/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Nov 2022 15:52:02 GMT -->
+</html>

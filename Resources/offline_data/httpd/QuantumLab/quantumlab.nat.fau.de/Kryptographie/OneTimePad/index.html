@@ -1,0 +1,153 @@
+<html>
+
+<!-- Mirrored from quantumlab.nat.fau.de/Kryptographie/OneTimePad/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Nov 2022 15:50:41 GMT -->
+<head>
+<title>One-Time-Pad</title>
+</script>
+
+<script src="../../Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+<link href="../../Frames/Stylesheet.css" rel="stylesheet" type="text/css">
+<script src="../../Frames/Frameset_nachladen.js" type="text/javascript"></script>
+<style type="text/css">
+<!--
+.Stil8 {font-family: Arial, Helvetica, sans-serif}
+.Stil9 {font-family: Arial, Helvetica, sans-serif; font-weight: bold; }
+.Stil14 {font-size: 25px; font-family: Arial, Helvetica, sans-serif;}
+.Stil22 {color: #00CC00}
+.Stil23 {color: #000000}
+.Stil24 {font-size: 16px}
+.Stil25 {	font-size: 24px;
+}
+.Stil26 {	color: #00CC00;
+	font-size: 24px;
+}
+.Stil30 {font-size: 24px; color: #FF0000;}
+.Stil32 {color: #0000FF}
+.Stil33 {color: #FF0000}
+.Stil41 {color: #000000; font-family: Arial, Helvetica, sans-serif;}
+.Stil47 {color: #FFFFFF}
+.Stil64 {font-weight: bold}
+.Stil66 {font-weight: bold}
+.Stil68 {font-size: 24px; font-weight: bold; }
+.Stil69 {font-size: 10px; font-family: Arial, Helvetica, sans-serif;}
+.Stil73 {color: #0000FF; font-weight: bold; }
+.Stil75 {color: #FF0000; font-weight: bold; }
+.Stil76 {
+	color: #00CC00;
+	font-weight: bold;
+}
+
+-->
+</style>
+</head>
+<body onLoad='checkFrameset()'>
+<p align="center" class="Stil14"><span class="ueberschrift"><br>
+  Quantenkryptographie Kapitel 1:</span><br>
+  <span class="unterueberschrift">Verschl&uuml;sselung mit dem  One-Time-Pad</span></p>
+<p align="left" class="Stil8">&nbsp;</p>
+<p align="justify" class="text-normal">Der Datenaustausch erfolgt heute meist in digitaler Form. Digitale Nachrichten bestehen aus den Bin&auml;rzahlen 1 und 0. Jeder Buchstabe einer Nachricht wird zun&auml;chst in  Bin&auml;rzahlen  zerlegt, &uuml;ber das Internet &uuml;bertragen und beim Empf&auml;nger wieder als Buchstabe angezeigt. Ein Lauscher k&ouml;nnte diese bin&auml;re Nachricht abfangen, lesen und zum eigentlichen Empf&auml;nger weiterleiten. Der Empf&auml;nger hat keine Kontrolle dar&uuml;ber, ob die Nachricht bereits gelesen oder sogar manipuliert wurde.<br>
+Auf der folgenden Seite wird ein Kryptographieverfahren vorgestellt, das bei Beachtung aller Regeln eine Sicherheit  von 100%  bietet. Das Verfahren hat noch nichts mit der Quantenphysik zu tun. Die Quantenphysik wird erst sp&auml;ter ben&ouml;tigt, um den geheimen Schl&uuml;ssel absolut zuf&auml;llig zu erzeugen und  absolut sicher zu &uuml;bertragen. </p>
+<p align="left" class="Stil8">&nbsp;</p>
+<p align="left" class="text-ueberschrift">Grundlagen des One-Time-Pads</p>
+<blockquote>
+  <p align="justify" class="text-normal"> <span class="text-normal">Um eine Nachricht sicher zu &uuml;bertragen,  ben&ouml;tigen sowohl der Sender als auch der Empf&auml;nger einen geheimen Schl&uuml;ssel. Der Sender  verschl&uuml;sselt die Nachricht mit dem geheimen Schl&uuml;ssel.  Die verschl&uuml;sselte Nachricht wird danach &ouml;ffentlich z. B. &uuml;ber das Internet &uuml;bertragen. Der Empf&auml;nger entschl&uuml;sselt die verschl&uuml;sselte Nachricht mit seinem eigenen geheimen Schl&uuml;ssel und besitzt somit die eigentliche Nachricht. Ein Spion kann die verschl&uuml;sselte Nachricht zwar unbemerkt abfangen, jedoch fehlt ihm der geheime Schl&uuml;ssel um die Nachricht zu entziffern.</span></p>
+</blockquote>
+<span class="text-normal">
+<blockquote>
+  </span>
+<blockquote>
+  <p align="justify"><span class="text-normal">Um eine Nachricht sicher zu übertragen, benötigen sowohl der Sender (Alice) und der Empfänger (Bob) der Nachricht einen  exakt gleichen, aber geheimen Schlüssel. Zur digitalen Übertragung  muss der Schlüssel wie die eigentliche Nachricht binär sein und muss aus zufällig gewählten  1 und 0 bestehen. Alice und Bob müssen sich zunächst einmal persönlich und ganz allein treffen, um den geheimen Schlüssel zu erzeugen und für beide zu kopieren. Erst wenn Alice und Bob im Besitz des geheimen Schlüssels sind, kann die eigentliche Verschlüsselung und Übertragung der sensiblen Nachricht beginnen. Für die Verschlüsselung wird die eigentliche </span><span class="Stil41"><span class="Stil73">Nachricht</span> </span><span class="text-normal">mit dem</span><span class="Stil41"> <span class="Stil75">Schlüssel</span></span><span class="text-normal"> binär addiert. Bei der binären Addition (nach der XOR-Logik) gibt es die folgenden vier Rechenregeln:</span></p>
+  <table width="100%" border="0">
+    <tbody><tr>
+      <td width="26%"><div class="Stil68" align="center"><span class="Stil32">0</span>+<span class="Stil33">0</span>=<span class="Stil47"><span class="Stil22">0</span>0</span></div></td>
+
+      <td width="26%"><div class="Stil68" align="center"><span class="Stil32">1</span>+<span class="Stil33">1</span>=<span class="Stil22">0</span></div></td>
+      <td width="24%"><div class="Stil68" align="center"><span class="Stil32">1</span>+<span class="Stil33">0</span>=<span class="Stil22">1</span></div></td>
+      <td width="24%"><div class="Stil68" align="center"><span class="Stil32">0</span>+<span class="Stil33">1</span>=<span class="Stil22">1</span></div></td>
+
+    </tr>
+  </tbody></table>
+  <p class="Stil41" align="justify"><span class="text-normal">Die </span><span class="Stil76">verschlüsselte Nachricht</span><span class="text-normal"> wird dann öffentlich und für jeden lesbar z. B. auf einer Postkarte oder über das Internet übertragen. Ein Spion kann mit der verschlüsselten Nachricht ohne den Schlüssel nichts anfangen. Beim Empfänger wird der verschlüsselte Text wieder mit dem gleichen</span> <span class="Stil75">Schlüssel</span> <span class="text-normal">binär addiert und der Empfänger besitzt die eigentliche</span> <span class="Stil73">Nachricht</span><span class="text-normal">:</span></p>
+  <table border="0" width="100%">
+
+    <tbody><tr>
+      <td class="Stil64" width="26%"><div class="Stil24" align="center"><span class="Stil47"><span class="Stil26">0</span></span><span class="Stil25">+<span class="Stil33">0</span>=<span class="Stil32">0</span></span></div></td>
+      <td class="Stil64" width="25%"><div class="Stil25" align="center"><span class="Stil22">0</span>+<span class="Stil33">1</span>=<span class="Stil32">1</span></div></td>
+      <td class="Stil64" width="24%"><div class="Stil24" align="center"><span class="Stil32"><span class="Stil26">1</span></span><span class="Stil30"><span class="Stil23">+</span>0</span><span class="Stil25">=<span class="Stil32">1</span></span></div></td>
+
+      <td class="Stil64" width="25%"><div class="Stil24" align="center"><span class="Stil32"><span class="Stil26">1</span></span><span class="Stil25">+<span class="Stil33">1</span>=<span class="Stil32">0</span></span></div></td>
+    </tr>
+  </tbody></table>
+
+  <p align="justify" class="text-normal">In der folgenden Animation wird das Verschl&uuml;sselungsverfahren  mit einem Beispiel noch einmal ausf&uuml;hrlich behandelt. Bei diesem Beispiel wird eine Nachricht mit 5 Bits verschl&uuml;sselt, &uuml;bertragen und durch den Empf&auml;nger entschl&uuml;sselt. Mit 5 Bits k&ouml;nnen 32 verschiedene Zahlen oder Zeichen &uuml;bertragen werden. Diese Anzahl ist z. B. f&uuml;r das Alphabet ausreichend: A: 00000, B: 00001, C: 00010, D: 00011, E: 00100, F: 00101, G: 00111, H: 01000, ....</p>
+  <p class="Stil9">&nbsp;</p>
+</blockquote>
+<table width="100%" border="0">
+  <tr>
+    <td class="Stil66"><div align="center">
+      <span class="text-normal">
+      <script type="text/javascript">
+AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0','width','910','height','412','src','QKD','quality','high','pluginspage','http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash','movie','QKD' ); //end AC code
+      </script>
+      <noscript>
+        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="910" height="412">
+          <param name="movie" value="QKD.swf">
+          <param name="quality" value="high">
+          <embed src="QKD.swf" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="910" height="412"></embed>
+        </object>
+        </noscript>
+      </span></div></td>
+  </tr>
+</table>
+<p class="Stil9">&nbsp;</p>
+<p class="Stil9">&nbsp;</p>
+<p class="Stil9">&nbsp;</p>
+<p class="text-ueberschrift">Der geheime Schl&uuml;ssel im One-Time-Pad:</p>
+<blockquote>
+  <p align="justify" class="text-normal">Das beschriebene Kryptographieverfahren wurde 1918 vom dem Kryptologen G. Vernam entwickelt und als &quot;One-Time-Pad&quot; bezeichnet. &Uuml;bersetzt hei&szlig;t dies Einmalblock: Der Schl&uuml;ssel wird erzeugt und nur auf zwei Bl&ouml;cke f&uuml;r Alice und Bob geschrieben. Jede Blockseite mit dem Schl&uuml;ssel darf nur einmal verwendet werden. In Zeiten des kalten Krieges wurden die Schl&uuml;ssel in kleine Bl&ouml;cke  gedruckt und mit Hilfe von Boten &uuml;bertragen. Falls der Bote nicht an seinem Ziel ankam, so hatte der &quot;Feind&quot; nur den Schl&uuml;ssel erhalten. Dieser Schl&uuml;ssel hat nichts mit der eigentlichen Nachricht zu tun und war f&uuml;r den &quot;Feind&quot; wertlos. Die eigentliche Nachricht wurde dann nicht mehr mit diesem Schl&uuml;ssel codiert. Gef&auml;hrlich wurde es aber, wenn der Schl&uuml;ssel auf dem Weg des Boten unbemerkt kopiert wurde. Die verschl&uuml;sselte Nachricht konnte somit entziffert werden.</p>
+  <p align="justify" class="text-normal"> Das Verfahren One-Time-Pad ist zu 100% sicher [Sha49], wenn f&uuml;r den geheimen Schl&uuml;ssel folgende Bedingungen erf&uuml;llt sind:<br>
+  </p>
+  <div align="justify" class="Stil23">
+    <div align="left" class="Stil8"></div>
+    <ul><li>
+        <div align="left" class="text-normal">Bedingung 1: Der Schl&uuml;ssel darf nur einmal verwendet werden.</div>
+      </li>
+      <li>
+        <div align="left" class="text-normal">Bedingung 2: Der Schl&uuml;ssel muss mindestens genauso lang wie die eigentliche Nachricht sein.</div>
+      </li>
+      <li>
+        <div align="left" class="text-normal">Bedingung 3: Der Schl&uuml;ssel muss unvorhersagbar zuf&auml;llig sein.</div>
+      </li>
+      <li>
+        <div align="left" class="text-normal">Bedingung 4: Der Schl&uuml;ssel darf nur zwei Personen bekannt sein.</div>
+      </li>
+    </ul>
+  </div>
+  <p align="justify" class="text-ueberschrift">Welche Bedingungen lassen sich  bisher erf&uuml;llen? </p>
+  <p align="justify" class="text-normal">F&uuml;r die Bedingung 1 ist der Sender  und der Empf&auml;nger verantwortlich. Jeder Schl&uuml;ssel muss nach dem einmaligen Verwenden sofort vernichtet werden, so dass er nicht ein zweites mal verwendet werden kann. Die Bedingung 2 l&auml;sst sich ebenfalls durch den Sender erf&uuml;llen. Der Sender darf eine Nachricht nur verschl&uuml;sseln, wenn er gen&uuml;gend Schl&uuml;ssel Bits  zur Verf&uuml;gung hat. <br>
+    <br>
+    F&uuml;r die Bedingung 3 werden zur Erzeugung des Schl&uuml;ssels Zufallszahlen ben&ouml;tigt. Zufallszahlen k&ouml;nnen z. B. mit Hilfe eines Computers erzeugt werden. Dieser Computerzufall wird allerdings &uuml;ber eine Rechnung generiert. Grundlage f&uuml;r die Rechnung ist ein Startwert, der sich selten wiederholt. Die &quot;Zuf&auml;lligkeit&quot; der Computerzahl h&auml;ngt somit nur von der Komplexit&auml;t der Rechenvorschrift und von dem Startwert ab. Computergenerierte Zufallszahlen werden deshalb  als &quot;Pseudozufallszahlen&quot; bezeichnet und sind f&uuml;r die absolut zuf&auml;llige Erzeugung eines Schl&uuml;ssels  nicht geeignet.<br>
+    <br>
+    Richtige Zufallszahlen k&ouml;nnen mit Hilfe der Quantenphysik erzeugt werden. Trifft ein einzelnes Photon auf einen Strahlteiler, wird es absolut zuf&auml;llig reflektiert (Bin&auml;r 1) oder transmittiert (Bin&auml;r 0) (Abb. 1). Hinter der Entscheidung steckt keine mathematische Rechenvorschrift. Ein solcher Quantenzufallsgenerator wird im Abschnitt <a href="../../Quantenzufall/index.html">Quantenzufall</a> mit Experimenten ausf&uuml;hrlich beschrieben. <br>
+  </p>
+  <p align="justify" class="text-normal"><br>
+  </p>
+  <p align="center" class="text-normal"><img src="Quantenzufallsgenerator.jpg" width="362" height="152"></p>
+  <p align="center" class="text-normal">Abb. 1: Quantenzufallsgenerator mit angek&uuml;ndigter Einzelphotonenquelle</p>
+  <p align="center" class="Stil41">&nbsp;</p>
+  <p align="justify" class="text-normal">Mit dem Quantenzufallsgenerator kann die Bedingung 3 erf&uuml;llt werden. Nun m&uuml;ssen die zuf&auml;llig generierten Schl&uuml;ssel an den Sender und an den Empf&auml;nger so verteilt werden, dass er eben nur genau diesen zwei Personen bekannt ist (Bedingung 4). Mit Boten ist die Sicherheit wieder nicht gew&auml;hrleistet. Aber auch hier bietet die Quantenphysik die ideale L&ouml;sung [<a href="../QKD-Einfuehrung/index.html">weiter</a>].</p>
+  <p align="center" class="Stil41">&nbsp;</p>
+</blockquote>
+<p align="justify" class="Stil9">&nbsp;</p>
+<p align="left" class="text-normal">Zum Kapitel 2: <a href="../QKD-Einfuehrung/index.html">Schl&uuml;sselverteilung mit einzelnen Photonen</a> (Schulniveau)</p>
+<p align="left" class="text-normal"><a href="../../Statistik/index.html"><br>
+</a>Zur&uuml;ck zur <a href="../index.html">&Uuml;bersicht</a></p>
+<p align="left" class="Stil9">&nbsp;</p>
+<p align="left" class="notizen">Autor: P. Bronner, August 2008</p>
+<blockquote>&nbsp;</blockquote>
+<span class="notizen"><img alt="" src="http://www.didaktik.physik.uni-erlangen.de/quantumlab/Homepagestatistik/aufruf.php?name=Kryptographie-OneTimePad-index.html&amp;lng=deutsch"></span>
+</body>
+
+
+<!-- Mirrored from quantumlab.nat.fau.de/Kryptographie/OneTimePad/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Nov 2022 15:50:41 GMT -->
+</html>

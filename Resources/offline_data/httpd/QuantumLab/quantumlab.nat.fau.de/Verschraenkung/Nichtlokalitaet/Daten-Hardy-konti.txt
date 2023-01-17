@@ -1,0 +1,111 @@
+# Quantenoptiklabor: Experiment Verschränkung: Aufnahme Wahrscheinlichkeit für Hardy-Jordan Ungleichung
+# Messung vom 26.04.2008 10:23
+# Aufnahme von je 20 Datenpunkten mit Mittelwert und Standardabweichung 
+# Pro Datenpunkt 10 Messungen zu je 10 Sekunden
+
+# Hardy-Ungelichung für die beiden Winkel bei Alice und Bob x=-34°, y=18°
+# Polarisation Pump-Licht: 65° (Nicht maximal verschränkter Zustand)
+
+ 
+# Didaktik der Physik, Universität Erlangen
+
+
+# Achsenbeschriftung:
+# Wahrscheinlichkeit	Stabw Wahrscheinlichkeit
+
+
+# P(-34°|-34°) (P(-34°|-34°) für Alice Transmittiert und Bob Transmittiert)
+
+0,0034	0,0004
+0,0039	0,0006
+0,0034	0,0006
+0,0035	0,0009
+0,0034	0,0005
+0,0036	0,0004
+0,0037	0,0007
+0,0034	0,0005
+0,0036	0,0005
+0,0036	0,0007
+0,0035	0,0007
+0,0037	0,0003
+0,0034	0,0005
+0,0038	0,0006
+0,0042	0,0008
+0,0037	0,0008
+0,0037	0,0005
+0,0034	0,0004
+0,0036	0,0006
+0,0034	0,0006
+
+
+# P(18°|-34°) (Achtung: P(18°|-34°) für Alice Transmittiert und Bob Reflektiert)
+	
+0,0021	0,0005
+0,0022	0,0005
+0,0025	0,0002
+0,0022	0,0005
+0,0025	0,0006
+0,0023	0,0004
+0,002	0,0003
+0,0024	0,0003
+0,0025	0,0006
+0,0026	0,0004
+0,0023	0,0004
+0,0024	0,0005
+0,0023	0,0004
+0,0026	0,0006
+0,0023	0,0004
+0,0025	0,0005
+0,0025	0,0005
+0,0025	0,0004
+0,0024	0,0004
+0,0025	0,0004
+
+
+# P(-34°|18°) (Achtung: P(-34°|18°) für Alice Reflektiert und Bob Transmittiert)
+
+0,0025	0,0006
+0,0025	0,0006
+0,0027	0,0006
+0,0028	0,0006
+0,0027	0,0004
+0,0027	0,0006
+0,0026	0,0006
+0,0026	0,0006
+0,0028	0,0005
+0,0028	0,0007
+0,0025	0,0003
+0,003	0,0004
+0,0028	0,0004
+0,0025	0,0004
+0,0024	0,0006
+0,0027	0,0006
+0,003	0,0006
+0,0029	0,0004
+0,0028	0,0005
+0,0027	0,0004
+
+
+# P(18°|18°) (P(18°|18°) für Alice Transmittiert und Bob Transmittiert)
+
+0,099	0,0036
+0,0988	0,0029
+0,0998	0,0023
+0,0994	0,0044
+0,0985	0,002
+0,0997	0,0034
+0,0996	0,0032
+0,0992	0,004
+0,0991	0,0017
+0,0987	0,003
+0,0988	0,004
+0,1003	0,0029
+0,1	0,004
+0,1001	0,0031
+0,0991	0,0029
+0,0991	0,0029
+0,0995	0,0021
+0,0997	0,0026
+0,099	0,0037
+0,0992	0,003
+

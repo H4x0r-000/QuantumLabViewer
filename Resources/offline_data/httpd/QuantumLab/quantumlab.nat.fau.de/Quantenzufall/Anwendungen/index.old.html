@@ -1,0 +1,86 @@
+<html>
+
+<!-- Mirrored from quantumlab.nat.fau.de/Quantenzufall/Anwendungen/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Nov 2022 15:50:38 GMT -->
+<head>
+<title>Quantenzufall</title>
+</script>
+
+<script src="../../Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+<link href="../../Frames/Stylesheet.css" rel="stylesheet" type="text/css">
+<script src="../../Frames/Frameset_nachladen.js" type="text/javascript"></script>
+</head>
+<body onLoad='checkFrameset()'>
+<p align="center">	<span class="ueberschrift"><br>
+  Quantenzufall Kapitel 2: </span><span class="Stil10"><br> 
+  </span><span class="unterueberschrift">Test, Anwendung, kommerzielle Systeme
+</span></p>
+<p align="left" class="text-normal"><br>
+  Auf dieser Seite werden die im <a href="../1Strahlteiler/index.html">letzten Kapitel</a> aufgenommen Zufallszahlen getestet. Als Anwendung von Zufallszahlen wird die Quantenmusik nach Mozart vorgestellt. Schlie&szlig;lich wird der Unterschied zwischen kommerziell erh&auml;ltlichen Quantenzufallsgeneratoren und unserem System beschrieben.<br>
+</p>
+<p align="center" class="Stil8">&nbsp;</p>
+<p align="left" class="text-ueberschrift">Test der Zuf&auml;lligkeit</p>
+<blockquote>
+  <p align="justify" class="text-normal">F&uuml;r sensible Anwendungen z. B. bei der <a href="../../Kryptographie/index.html">Kryptographie</a> m&uuml;ssen die Zufallszahlen absolut zuf&auml;llig sein. Wie kann getestet werden, ob es sich z. B. bei der Quantenzufallszahl um einen absoluten Zufall handelt? Leider gibt es kein Testverfahren, das die absolute Zuf&auml;lligkeit beweist. Die aufgenommene Zufallszahl kann auf Wiederholungen, Korrelationen oder Muster hin  untersucht werden. Auch wenn die Zufallszahl hierbei z. B. 20 verschiedene Tests besteht ist dies noch kein Beweis f&uuml;r absolute Zuf&auml;lligkeit. </p>
+  <p align="justify" class="text-normal">F&uuml;r die Schulanwendung k&ouml;nnen als Tests  die H&auml;ufigkeiten von Dezimalzahlen, eine evt. Musterbildung im 2D oder 3D Diagrammen oder die H&auml;ufigkeit von gleich folgenden  Bin&auml;rzahlen (0, 00, 000, 0000, ...) betrachtet werden. M&ouml;glich ist auch die Berechnung der Zahl Pi &uuml;ber die Monte-Carlo Methode. Die Quantenzufallszahlen k&ouml;nnen dabei mit computergenerierten Pseudozufallszahlen verglichen werden. In unserem Labor kann bei jedem Quantenzufallsexperiment ein f&uuml;r die Schulausbildung geeigneter Testbericht mit dem Vergleich von Quanten- und Pseudozufallszahlen automatisch erstellt werden [<a href="Quantum_Random.pdf" target="_blank">Beispiel</a>].</p>
+  <p align="justify" class="text-normal">F&uuml;r die industrielle Anwendung gibt es kommerzielle Testverfahren des &quot;National Institute of Standards and Technology (NIST)&quot; [Nis08].  Der Test beinhaltet 15 einzelne Testverfahren, in denen eine Musterbildung oder Korrelation der Zufallszahlen &uuml;berpr&uuml;ft wird. Der NIST Test gilt bei Informatikern als Standardtest bei Pseudozufallszahlen. Wir haben 100MBit an bin&auml;ren Quantenzufallszahlen aufgenommen.   Der Datensatz hat ohne vorherige Bearbeitung (z. B. durch den von-Neumann-Algorithmus [Neu51]) alle 15 Tests des NIST erfolgreich bestanden. Mit diesem Test k&ouml;nnen die Quantenzufallszahlen mit 99,9 % Sicherheit als zuf&auml;llig angesehen werden. Das Testprotokoll kann hier heruntergeladen werden [<a href="Testbericht.pdf" target="_blank">PDF</a>]. Weitere Testverfahren wie z. B. der Diehard-Test [Mar95] wurden ebenfalls erfolgreich durchgef&uuml;hrt. </p>
+  </blockquote>
+<p align="justify" class="Stil8">&nbsp;</p>
+<p align="justify" class="Stil8">&nbsp;</p>
+<p align="left" class="text-ueberschrift">Quantenmusik nach Mozart</p>
+<blockquote>
+  <p align="justify" class="text-normal">Zufallszahlen finden in vielen Bereichen Anwendung: In der Kryptographie zur Generierung von Schl&uuml;sseln, in der Industrie und Forschung zur Simulation, in unserem Alltag  bei Handys, Computerspielen und Bank&uuml;berweisungen, ... . Auch in der Musik gibt es Anwendungen f&uuml;r Zufallszahlen. Im Jahre 1793  erschien das musikalische W&uuml;rfelst&uuml;ck von Mozart [Moz93]. Bei diesem Musikspiel  kann durch 16-maliges W&uuml;rfeln mit zwei  normalen Spielew&uuml;rfeln ein Musikst&uuml;ck komponiert werden. Mittels einer Zuordnungstabelle wird jeder geworfenen Augenzahl ein Takt zugeordnet. In der Zuordnungstabelle sind 176 verschiedene Takte enthalten, womit   46 Billiarden verschiedene  Kompositionen erreicht werden k&ouml;nnen. Wir haben das musikalische W&uuml;rfelspiel von Mozart mit dem Quantenzufallsgenerator kombiniert: Sobald in unserem Labor ca. 100 bin&auml;re Zufallszahlen (1 oder 0) erzeugt wurden ert&ouml;nt  &quot;Quantenmusik nach Mozart&quot;. Das Musikst&uuml;ck wird  &uuml;ber die Zufallsentscheidung einzelner Photonen am Strahlteiler komponiert. Die Instrumente k&ouml;nnen beliebig gew&auml;hlt werden. Das Programm &quot;Quantenmusik&quot; entstand im Rahmen der Zulassungsarbeit von Andreas Strunz. Im unteren Beispiel k&ouml;nnen f&uuml;nf durch Photonen  komponierte Quantenmusikst&uuml;cke angeh&ouml;rt werden. Nach jedem Durchlauf wird das n&auml;chste St&uuml;ck geladen.<br>
+  </p>
+  <p align="justify" class="text-normal"><br>
+  </p>
+</blockquote>
+<table width="100%" border="0">
+  <tr>
+    <td><div align="center">
+      <span class="text-normal">
+      <script type="text/javascript">
+AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0','width','800','height','165','src','Mozart','quality','high','pluginspage','http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash','movie','Mozart' ); //end AC code
+      </script>
+      <noscript>
+      <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="800" height="165">
+        <param name="movie" value="Mozart.swf">
+        <param name="quality" value="high">
+        <embed src="Mozart.swf" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="800" height="165"></embed>
+      </object>
+      </noscript>
+    </span></div></td>
+  </tr>
+</table>
+<p align="left" class="Stil8">&nbsp;</p>
+<p align="left" class="Stil8">&nbsp;</p>
+<p align="left" class="text-ueberschrift">Kommerzielle Quantenzufallsgeneratoren</p>
+<blockquote>
+  <p align="justify" class="text-normal">Der erste Quantenzufallsgenerator wurde 1983 &uuml;ber den radioaktiven Zerfall [Ino83] realisiert. Quantenzufallsgeneratoren mit Einzelphotonendetektoren gibt es seit 1994 [Rar94], [Ste99], [Jen00], [Sou03].  Alle Experimente arbeiten allerdings mit abgeschw&auml;chtem Laserlicht. Die Firma idQuantique verkauft seit kurzem Quantenzufallsgeneratoren  als fertiges USB-Modul (Abb. 1) ab ca. 600 &euro;   [Idq08]. Das Modul ben&ouml;tigt keine externe Spannungsversorgung und muss nur noch mit dem USB-Kabel an den Computer angeschlossen werden. Im Modul ist ein abgeschw&auml;chter Laser, ein Strahlteilerw&uuml;rfel und zwei Detektoren enthalten. Pro Sekunde werden 4MBit an Zufallszahlen erzeugt. <br>
+    <br>
+    Warum ben&ouml;tigen wir f&uuml;r unserem Quantenzufallsgenerator (siehe oben) &uuml;berhaupt einen gro&szlig;en massiven  Tisch und viele optische Komponenten, wenn es viel einfacher geht?
+Das USB-Modul der Firma idQuantique arbeitet  mit abgeschw&auml;chtem Laserlicht, das auf einen Strahlteilerw&uuml;rfel geleitet wird und die beiden Detektoren anregt. Die Anregung der Detektoren w&auml;re aber auch  z. B. W&auml;rme m&ouml;glich. F&uuml;r unser  Quantenzufallsexperiment ist es uns  wichtig, das zun&auml;chst einzelne Photon  pr&auml;pariert werden. Wir m&ouml;chten ganz bewusst den Zufallsprozess durch ein einzelnes Photon am Strahlteiler erzeugen (Qubit).  Mit abgeschw&auml;chtem Laserlicht ist die Pr&auml;paration von einzelnen Photonen nicht m&ouml;glich (siehe unter<a href="../../Grundlagen/index.html"> Grundlagen</a>). Das Licht bei Experimenten mit abgeschw&auml;chtem Laserlicht kann klassisch als e-m Welle beschrieben werden. Die Quantisierung des Feldes wird nicht ben&ouml;tigt. Der Quantenzufallsgenerator mit abgeschw&auml;chtem Licht ist eine gute L&ouml;sung f&uuml;r viele praktische Anwendungen, er erf&uuml;llt aber nicht das Konzept von einzelnen Photonen am Strahlteilerw&uuml;rfel.</p>
+  <p align="justify" class="text-normal"> Das von uns aufgebaute Experiment zum Quantenzufallsgenerator mit einzelnen angek&uuml;ndigten Photonen wurde  erstmals 2004 [Hai04] ver&ouml;ffentlicht. Quantenzufallsgeneratoren k&ouml;nnen genauso mit  verschr&auml;nkten Photonen [Owe08] und &uuml;ber die Hong-Ou-Mandel Interferenz [Kwo09] realisiert werden. </p>
+</blockquote>
+<blockquote>
+  <p align="justify" class="Stil8">&nbsp;</p>
+  <p align="center" class="text-normal"><img src="Quantis.jpg" alt="Quantis - idQuantique" width="682" height="306"><br>
+  </p>
+  <p align="center" class="text-normal">Abb. 1: Quantenzufallsgenerator &quot;Quantis&quot; der Firma idQuantique - 1&euro; M&uuml;nze als Gr&ouml;&szlig;envergleich</p>
+  <p align="justify" class="Stil8">&nbsp;</p>
+  <p align="justify" class="Stil8">&nbsp;</p>
+</blockquote>
+<p align="justify" class="text-normal">Testprotokoll zum Test der Zufallszahl: <a href="Quantum_Random.pdf" target="_blank">Schulanwendung</a>, <a href="Testbericht.pdf" target="_blank">Industrietest NIST</a><br>
+Quantenmusik nach Mozart (mp3): <a href="1.mp3">St&uuml;ck_1</a>, <a href="2.mp3">St&uuml;ck_2</a>, <a href="3.mp3">St&uuml;ck_3</a>, <a href="4.mp3">St&uuml;ck_4</a>, <a href="5.mp3">St&uuml;ck_5</a></p>
+<p align="justify" class="Stil8">&nbsp;</p>
+<p align="justify" class="text-normal">Zum n&auml;chsten Kapitel: Quantenzufall an zwei Strahlteilerw&uuml;rfel [<a href="../2Strahlteiler/index.html">klick</a>]<br>
+Zur&uuml;ck zur &Uuml;bersicht [<a href="../index.html">klick</a>]</p>
+<p align="justify" class="text-normal"><a href="5.mp3"><br>
+</a></p>
+<p align="justify" class="Stil8">&nbsp;</p>
+<p align="justify" class="notizen">Autor: P. Bronner, A. Strunz, April 2008</p>
+<p align="justify" class="Stil12">&nbsp;</p>
+<span class="notizen"><img alt="" src="http://www.didaktik.physik.uni-erlangen.de/quantumlab/Homepagestatistik/aufruf.php?name=Quantenzufall-Anwendung.html&amp;lng=deutsch"></span>
+</body>
+
+
+<!-- Mirrored from quantumlab.nat.fau.de/Quantenzufall/Anwendungen/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Nov 2022 15:50:39 GMT -->
+</html>

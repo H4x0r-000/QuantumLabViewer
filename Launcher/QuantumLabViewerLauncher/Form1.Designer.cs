@@ -40,7 +40,6 @@ namespace QuantumLabViewerLauncher
             this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -153,23 +152,11 @@ namespace QuantumLabViewerLauncher
             this.label3.Text = "Launcher/Viewer erstellt von H4x0r_000";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.linkLabel1.Location = new System.Drawing.Point(273, 533);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(55, 13);
-            this.linkLabel1.TabIndex = 10;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "linkLabel1";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 574);
-            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button5);
@@ -180,9 +167,9 @@ namespace QuantumLabViewerLauncher
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.ShowIcon = false;
             this.Text = "QuantumLab Launcher";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -204,7 +191,6 @@ namespace QuantumLabViewerLauncher
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 

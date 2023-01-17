@@ -1,0 +1,145 @@
+<html>
+
+<!-- Mirrored from quantumlab.nat.fau.de/Kryptographie/QKD/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Nov 2022 15:50:43 GMT -->
+<head>
+<title>Schl&uuml;sselverteilung mit Spion</title>
+</script>
+
+<script src="../../Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+<link href="../../Frames/Stylesheet.css" rel="stylesheet" type="text/css">
+<script src="../../Frames/Frameset_nachladen.js" type="text/javascript"></script>
+</head>
+<body onLoad='checkFrameset()'>
+<p align="center" class="Stil14"><span class="ueberschrift"><br>
+  Quantenkryptographie Kapitel 3:</span><br>
+  <span class="unterueberschrift">Schl&uuml;sselverteilung mit Nachweis eines Spions</span></p>
+<p align="left" class="Stil8">&nbsp;</p>
+<p align="justify" class="text-normal">Im letzten Kapitel zur <a href="../QKD-Einfuehrung/index.html">Schl&uuml;sselverteilung</a> mit einzelnen Photonen wurde gezeigt, wie das Grundprinzip der Schl&uuml;sselverteilung zwischen Alice und Bob funktioniert. Leider kann hier jedoch ein Spion unbemerkt den geheimen Schl&uuml;ssel kopieren. Auf dieser Seite wird das System mit einer zweiten Basis zur Messung erg&auml;nzt, wodurch  am Ende der &Uuml;bertragung des Schl&uuml;ssels Spione aufgedeckt werden k&ouml;nnen.</p>
+<p align="left" class="Stil8">&nbsp;</p>
+<p align="left" class="text-ueberschrift">Einf&uuml;hrung der zweiten Basis</p>
+<blockquote>
+  <p align="justify" class="text-normal"> Um Spione bei der Quantenkryptographie aufdecken zu k&ouml;nnen, m&uuml;ssen zus&auml;tzliche Elemente in das System eingef&uuml;gt werden. Bob und Alice benutzen deshalb zwei Messbasen:   Basis Plus (Bezeichung: <strong>+</strong>) und Basis X (Bezeichung: <strong>x</strong>). In jeder Basis gibt es eine fest definierte Polarisationsrichtung f&uuml;r die beiden Bits 1 oder 0. In der Basis <strong>+</strong> entspricht die Polarisation von 0&deg; dem Bit &quot;1&quot; und  die Polarisation von 90&deg; dem Bit &quot;0&quot; (Abb. 1 links). In der Basis <strong>x</strong> entspricht die Polarisation 45&deg; dem Bit &quot;1&quot; und die Polarisation -45&deg; dem Bit &quot;0&quot; (Abb. 1 rechts).</p>
+  <p align="justify" class="Stil8">&nbsp;</p>
+  <p align="center" class="text-normal"><img src="Zuordnung.jpg" width="348" height="125"></p>
+  <p align="center" class="text-normal">Abb. 1: Messbasis  <strong>+</strong> (links) und Messbasis <strong>x</strong> (rechts) </p>
+  <p align="center" class="Stil8">&nbsp;</p>
+  <p align="justify" class="text-normal"> F&uuml;r die &Uuml;bertragung von einem Bit muss Alice nun zweimal zuf&auml;llig w&auml;hlen. Zun&auml;chst w&auml;hlt sie zuf&auml;llig, in welcher Basis sie das Bit versenden m&ouml;chte: <strong>+</strong> oder <strong>x</strong>. Danach w&auml;hlt sie zuf&auml;llig, welches Bit sie in dieser Basis &uuml;bertragen m&ouml;chte: 1 oder 0. Alice ben&ouml;tigt somit vier verschiedene Winkel an ihrem Polarisationsdreher: 0&deg;, 90&deg; f&uuml;r die Basis <strong>+</strong> und  45&deg;, -45&deg; f&uuml;r die Basis <strong>x</strong> (Abb. 2). Auch 
+    Bob muss sich nun immer rein zuf&auml;llig f&uuml;r eine Messbasis entscheiden: <strong>+</strong> oder <strong>x</strong>. Hierf&uuml;r ben&ouml;tigt er einen Polarisationsdreher mit zwei festen Einstellungen in seiner Empfangseinheit. Auch Bob w&auml;hlt rein zuf&auml;llig entweder 0&deg; f&uuml;r die Messbasis <strong>+</strong> oder 45 &deg; f&uuml;r die Messbasis <strong>x </strong>(Abb. 2). </p>
+  <p align="justify" class="Stil8">&nbsp;</p>
+  <p align="center" class="text-normal"><img src="QKD0.jpg" width="707" height="208"></p>
+  <p align="center" class="text-normal">Abb. 2: Skizze Experimente zur Quantenkryptographie</p>
+  <p align="justify" class="Stil8">&nbsp;</p>
+  <p align="justify" class="text-normal">Wenn  Alice das Photon in der Basis <strong>+</strong> mit der Polarisation 0&deg; oder 90&deg; verschickt und Bob die  Basis <strong>+</strong> w&auml;hlt,  so gibt es eindeutige Ergebnisse. Wenn  Alice das Photon in der Basis <strong>x</strong> mit der Polarisation -45&deg; oder 45&deg; verschickt und Bob die  Basis <strong>x</strong> w&auml;hlt, so gibt es wieder eindeutige Ergebnisse. Wenn Alice und Bob zuf&auml;llig die gleichen Basen w&auml;hlen, sind die  &uuml;bertragenen Daten  eindeutig und k&ouml;nnen f&uuml;r den Schl&uuml;ssel verwendet werden (Tabelle 1). Wenn  Alice das Photon in der Basis <strong>+</strong> mit der Polarisation 0&deg; oder 90&deg; versendet und Bob die Basis <strong>x </strong>w&auml;hlt, dann ist das Photon vor dem Strahlteiler diagonal polarisiert. Trifft ein diagonal polarisiertes Photon auf einen Polarisationsstrahlteiler, so wird das Photon mit der Wahrscheinlichkeit von 50% transmittiert oder mit der Wahrscheinlichkeit von 50% reflektiert. Das gleiche 50% zu 50% Verhalten am Strahlteiler ergibt sich, wenn Alice das Photon in der Basis <strong>x</strong> verschickt und Bob zur Messung die Basis <strong>+</strong> w&auml;hlt. Wenn Alice und Bob verschiedene Basen w&auml;hlen, sind die &uuml;bertragenen Daten absolut zuf&auml;llig und nicht zu gebrauchen (Tabelle 1).</p>
+  <p align="justify" class="Stil8">&nbsp;</p>
+  <p align="center" class="text-normal"><img src="TabelleQKD.jpg" width="741" height="255"><br>
+  Tabelle1: &Uuml;bersicht &uuml;ber die verschiedenen M&ouml;glichkeiten</p>
+  <p class="Stil8">&nbsp;</p>
+  <p class="Stil8">&nbsp;</p>
+</blockquote>
+<p class="text-ueberschrift">Schl&uuml;sselverteilung mit zweiter Basis im Experiment</p>
+<blockquote>
+  <p align="justify" class="text-normal">Im unteren interaktiven Experiment kann das Ergebnis von Tabelle 1 mit realen Messdaten &uuml;berpr&uuml;ft werden. Die beiden Polarisationsdreher  (Abb. 3) k&ouml;nnen im interaktiven Experiment manuell  mit Hilfe der grauen Taster eingestellt werden . Bei Alice kann die Polarisation -45&deg;, 0&deg;, 45&deg; und 90&deg; eingestellt werden (Abb. 3 links). Bei Bob kann die Polarisation 0&deg; (Basis <strong>+</strong>) und 45&deg; (Basis <strong>x</strong>) eingestellt werden (Abb. 3 mitte). Wie im realen Experiment k&ouml;nnen die Polarisationsdreher bei Alice und Bob auch automatisch betrieben werden (Abb. 3 rechts). Zur &Uuml;bersicht der verschiedenen Messungen k&ouml;nnen sowohl bei Alice als auch bei Bob Listen eingeblendet werden.</p>
+  <p align="justify" class="text-normal">Der erzeugte Schl&uuml;ssel muss unvorhersagbar zuf&auml;llig sein (<a href="../OneTimePad/index.html">Kapitel 1</a>: Bedingung 3). Im manuellen Betrieb mit den Polarisationsdreher muss die zuf&auml;llige Entscheidung durch den Experimentator (Alice bzw. Bob) gegeben sein. Alice und Bob d&uuml;rfen die Einstellung nicht nach einer festen Regel festlegen sondern willk&uuml;rlich. Wird der Polarisationsdreher bei Alice und Bob automatisch betrieben (Abb. 3 rechts), so muss dieser &uuml;ber einen absoluten Zufall angesteuert werden. Dieser absolute Zufall wird experimentell &uuml;ber ein Quantenzufallsgeerator erzeugt. Die Zufallszahlen wurde zuvor im Experiment <a href="file:///D:/Patrick/Homepage/Kryptographie/Quantenzufall/index.html">Quantenzufall</a> aufgenommen und gespeichert. F&uuml;r die absolute Sicherheit muss die  Quantenzufallszahl direkt parallel erzeugt werden und ohne  Zwischenspeicherung auf den automatischen Polarisationsdreher  &uuml;bertragen werden. </p>
+  <p align="justify" class="Stil8">&nbsp;</p>
+  <table width="100%" border="0">
+    <tr>
+      <td height="365"><div align="center">
+        <p class="text-normal"><img src="WP-4.jpg" width="234" height="363"></p>
+        </div></td>
+      <td><div align="center">
+        <p class="text-normal"><img src="WP-2.jpg" width="234" height="363"></p>
+        </div></td>
+      <td><div align="center" class="text-normal"><img src="WP-AUTO.jpg" width="234" height="363"></div></td>
+    </tr>
+  </table>
+  <p align="center" class="text-normal">Abb. 3: Polarisationsdreher f&uuml;r die Quantenkryptographie<br>
+  links: Polarisationsdreher Alice -45&deg;, 0&deg;, 45&deg;, 90&deg;<br>
+  mitte: Polarisationsdreher Bob 0&deg; (Basis <strong>+</strong>) und 45&deg; (Basis <strong>x</strong>)<br>
+  rechts: automatischer Polarisationsdreher f&uuml;r Alice und Bob</p>
+  <p align="center" class="Stil8">&nbsp;</p>
+  <p align="justify" class="text-normal">&Uuml;berzeugen Sie sich mit dem interaktiven Experiment zun&auml;chst, dass es bei gleicher Basenwahl eindeutige Messergebnisse gibt (a). Alice und Bob w&auml;hlen die Messbasen immer rein zuf&auml;llig und unabh&auml;ngig voneinander. W&auml;hrend des Messvorgangs wei&szlig; keiner von beiden, welche Basis der Partner gew&auml;hlt hat. Welche M&ouml;glichkeiten gibt es nun f&uuml;r Alice und Bob, damit beide nach der &Uuml;bertragung die Eintr&auml;ge in den Listen mit den ungleichen Messbasen l&ouml;schen und dadurch einen eindeutigen und geheimen Schl&uuml;ssel erhalten (b)? </p>
+</blockquote>
+<p align="justify" class="Stil8">&nbsp;</p>
+<table width="100%" border="0">
+  <tr>
+    <td><div align="center">
+      <span class="text-normal">
+      <script type="text/javascript">
+AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0','width','905','height','605','src','Start_QKD_K','quality','high','pluginspage','http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash','movie','Start_QKD_K' ); //end AC code
+      </script>
+      <noscript>
+        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="905" height="605">
+          <param name="movie" value="Start_QKD_K.swf">
+          <param name="quality" value="high">
+          <embed src="Start_QKD_K.swf" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="905" height="605"></embed>
+        </object>
+        </noscript>
+      </span></div></td>
+  </tr>
+</table>
+<p align="justify" class="Stil8">&nbsp;</p>
+<blockquote>
+  <p align="justify" class="text-normal"><span class="text-ueberschrift">Beobachtung und Erkl&auml;rung:</span><br>
+    zu a)<br>
+    Die Messergebnisse sind eindeutig, wenn Alice und Bob die gleiche Basis w&auml;hlen. Bei unterschiedlicher Wahl der Basis kann nicht vorhergesagt werden, ob das Photon am Polarisationsstrahlteiler transmittiert oder reflektiert wird. Aufgrund von experimentellen Ungenauigkeiten und Messfehlern gibt es bei gleicher Wahl der Basis sehr selten (in 1% der F&auml;lle) ein Ereignis, bei dem Alice z. B. die bin&auml;re 1 sendet und Bob die bin&auml;re 0 empf&auml;ngt. Diese Fehler k&ouml;nnen sp&auml;ter durch spezielle Fehleralgorithmen herausgefiltert werden (siehe unter &quot;genauer <a href="../Forschung/index.html#Prozedere">Ablauf </a>der Quantenkryptographie&quot;) . </p>
+  <p align="justify" class="text-normal">zu b)<br>
+  Wie bekommen Alice und Bob aus den Einstellungen und Messergebnissen einen eindeutigen und geheimen Schl&uuml;ssel? <br>
+  Bei jedem gesendeten Photon notiert Alice in ihrer Liste, welche Basis sie gew&auml;hlt hat  und welches Bit sie &uuml;bertragen hat. Bob notiert bei jedem Photon in seiner Liste,  welche Basis er zur Messung gew&auml;hlt hat und  welcher Detektor das Photon registrierte. Alice und Bob besitzen somit zwei Listen mit den Eintr&auml;gen: Photon - Basis - Bit (Abb. 4 links). Nach z. B. 100 Photonen telefonieren Alice und Bob miteinander und erz&auml;hlen sich nur, bei welchem Photon sie in welcher Basis gemessen haben. Stimmen die Basen &uuml;berein, so werden die Ergebnisse behalten. Stimmen die Basen nicht &uuml;berein, so werden die Ergebnisse gel&ouml;scht (Abb. 4 rechts). Beim Telefonieren werden nur die verwendeten Basen verraten, das gesendete oder gemessene Bit bleibt geheim. Ein Spion k&ouml;nnte bei diesem Telefonat mith&ouml;ren, wobei ihm diese Information nichts bringt. Das eigentliche Ergebnis - die eindeutig &uuml;bertragenen Bits - werden nicht verraten und sind noch immer geheim. </p>
+  <p align="justify" class="text-normal">Insgesamt werden nur 50% aller urspr&uuml;nglichen Messergebnisse f&uuml;r den zuf&auml;lligen Schl&uuml;ssel verwendet. Der Kontakt zwischen Alice und Bob und das L&ouml;schen der falschen Ergebnisse kann nat&uuml;rlich auch durch einen Computer erfolgen. Mit Quantenzufallsgeneratoren und den beiden automatischen Polarisationsdrehern arbeitet das System v&ouml;llig selbstst&auml;ndig. Mit unseren  motorgetriebenen automatischen Polarisationsdrehern im Demonstrationsexperiment ist  nur eine Rohdatenrate von weniger als 1 Bit pro Sekunde m&ouml;glich. F&uuml;r eine praktische Anwendung ist diese Datenrate viel zu gering. Eine Bitrate mit bis zu einigen Millionen Bit pro Sekunde ist mit elektrooptischen Polarisationsdrehern m&ouml;glich, da diese keine mechanisch bewegten Teile haben. </p>
+  <p align="justify" class="text-normal">K&ouml;nnen sich sich Alice und Bob nun wirklich sicher sein, dass nur sie beide den Schl&uuml;ssel kennen? K&ouml;nnte nicht auch wieder der Spion  den Schl&uuml;ssel unbemerkt kopiert haben?</p>
+  <p align="justify" class="Stil8">&nbsp;</p>
+  <table width="100%" border="0">
+    <tr>
+      <td><div align="center" class="text-normal"><img src="Liste1.jpg" alt="Liste" width="401" height="191"></div></td>
+      <td><div align="center" class="text-normal"><img src="Liste0.jpg" alt="Liste" width="401" height="191"></div></td>
+    </tr>
+  </table>
+  <p align="center" class="text-normal">Abb. 4 links: Ergebnisse nach der &Uuml;bertragung: Zuf&auml;llige Basenwahl bei Alice und Bob.<br>
+  Abb. 4 rechts: Ergebnisse nach dem L&ouml;schen der unterschiedlichen Basen.</p>
+  <p align="justify" class="Stil8">&nbsp;</p>
+  <p>&nbsp;</p>
+</blockquote>
+<p class="text-ueberschrift">Schl&uuml;sselverteilung mit einzelnen Photonen: Spion entdecken</p>
+<blockquote>
+  <p class="text-normal">Bisher kann noch nicht gesagt werden, ob sich der Aufwand mit den beiden Basen f&uuml;r die sichere Generierung des Schl&uuml;ssels zwischen Alice und Bob wirklich gelohnt hat. Auch der Spion Eve kann ihre Abh&ouml;reinrichtung mit zus&auml;tzlichen Polarisationsdrehern f&uuml;r die Wahl der zwei Basen aufr&uuml;sten (Abb. 5) . </p>
+  <p class="Stil8">&nbsp;</p>
+  <p align="center" class="text-normal"><img src="Eve1.jpg" width="400" height="123"><br>
+    <br>
+    Abb. 5: Abh&ouml;reinrichtung von Eve mit zwei Basen</p>
+  <p>&nbsp;</p>
+  <p align="justify" class="text-normal">Der Spion Eve kann nun auch rein zuf&auml;llig eine Basis w&auml;hlen und das Photon messen. Eve muss allerdings sofort wieder ein neues Photon an Bob senden. In 50% der F&auml;lle w&auml;hlt Eve zur Messung die falsche Basis. Diesen durch Eve verursachten Fehler k&ouml;nnen Alice und Bob allerdings nur bemerken, wenn Alice und Bob  die gleiche Basis gew&auml;hlt haben. Bei gleicher Wahl der Basis sollten Alice und Bob immer  eindeutige Ergebnisse erhalten. In Tabelle 2 werden alle M&ouml;glichkeiten skizziert, welche Fehler durch Eve verursacht werden k&ouml;nnen, wenn Alice und Bob die gleiche Basis w&auml;hlen. </p>
+  <p align="justify" class="Stil8">&nbsp;</p>
+  <p align="center" class="text-normal"><img src="Tab-Eve.jpg" alt="Tab" width="647" height="156"><br>
+  Tabelle 2: M&ouml;glichkeiten der &Uuml;bertragung mit dem Lauscher Eve</p>
+  <p align="center" class="Stil8">&nbsp;</p>
+  <p align="justify" class="text-normal">Insgesamt gibt es bei gleicher Basenwahl von Alice und Bob durch die Anwesenheit von Eve in 25% der F&auml;lle falsche Messergebnisse. Um Eve zu entdecken, m&uuml;ssen Alice und Bob nach dem L&ouml;schen der unterschiedlich gew&auml;hlten Basen einige der eindeutigen Messergebnisse &ouml;ffentlich &uuml;berpr&uuml;fen. Bei einem Fehler der eigentlich eindeutigen Daten von mind. 25% k&ouml;nnen Alice und Bob  Eve enttarnen. Eve kann allerdings erst nach der Schl&uuml;ssel&uuml;bertragung entdeckt werden. Bisher wurde lediglich nur der Schl&uuml;ssel generiert und dieser hat mit der eigentlichen Nachricht zur Verschl&uuml;sselung noch nichts zu tun. Im Fall der Anwesenheit eines Spions wird dieser Schl&uuml;ssel einfach gel&ouml;scht und nicht zur Verschl&uuml;sselung der eigentlichen Nachricht verwendet. Die verwendeten Bits zur &Uuml;berpr&uuml;fung der Anwesenheit eines Spions werden nat&uuml;rlich aus dem eigentlichen Schl&uuml;ssel gel&ouml;scht. Nach dem Ausschluss eines Spions und der Korrektur der Messfehler (ca. 1%) durch spezielle Fehlerkorrekturalgorithmen kann der Schl&uuml;ssel zur eigentlichen Verschl&uuml;sselung zwischen Alice und Bob verwendet werden. Das genaue Prozedere von der Schl&uuml;sselverteilung bis zur verschl&uuml;sselten Nachricht wird im n&auml;chsten Kapitel unter <a href="../Forschung/index.html#Prozedere">Ablauf</a> erl&auml;utert.</p>
+  <p align="justify" class="Stil8">&nbsp;</p>
+  <p align="justify" class="Stil8">&nbsp;</p>
+</blockquote>
+<p align="justify" class="text-ueberschrift">Ein Quantenkopierer f&uuml;r Eve?</p>
+<blockquote>
+  <p align="justify" class="text-normal">Mit der oberen Spionageeinrichtung (Abb. 5) kann Eve immer entdeckt werden. Am besten w&auml;re f&uuml;r Eve eine Maschine, die das Photon mit allen Eigenschaften exakt kopiert. Beim Kopieren des Photons darf  die Polarisation  des Originalphotons jedoch nicht ver&auml;ndert werden.  F&uuml;r Alice und Bob w&auml;re es mit einem solchen Quantenkopierer  nicht m&ouml;glich, den Spion Eve aufzusp&uuml;ren. Eve k&ouml;nnte jedes Photon zwischen Alice und Bob  zwei mal kopieren und jeweils mit getrennten Basen messen. Durch das Telefonat von Alice und Bob mit Bekanntgabe der jeweiligen Basis w&auml;re Eve im Besitz aller Bits des Schl&uuml;ssels. Somit bietet das  System der Quantenkryptographie trotz der beiden Basen wieder absolut keine Sicherheit mehr.<br>
+  </p>
+  <p align="justify" class="text-normal">Doch gut, dass es die Quantenphysik gibt: Es ist <strong>niemals</strong> m&ouml;glich einen unbekannten Quantenzustand perfekt zu kopieren. Erst 1982 wurde dieses quantenphysikalische Grundprinzip  als &quot;no-cloning-theorem&quot; formuliert und theoretisch bewiesen [Woo82]. Die Polarisation des Photons von Alice kann somit niemals kopiert werden, ohne die Polarisation des urspr&uuml;nglichen Photons zu ver&auml;ndern. Die Sicherheit des Systems Quantenkryptographie beruht auf den Grundlagen der Quantenphysik.	Das Quantenkryptographiesystem  mit einzelnen Photonen und der rein zuf&auml;lligen Wahl von zwei Basen ist dank des &quot;no-cloning-theorems&quot; zu 100% sicher.</p>
+  <p align="justify" class="Stil8">&nbsp;</p>
+  <p align="justify" class="text-normal">Im n&auml;chsten Kapitel wird der genaue Ablauf der Quantenkryptographie in einer &Uuml;bersicht wiederholt. In weiteren Abschnitten geht es  um den Stand der aktuellen Forschung und die verwendete Einzelphotonenquelle f&uuml;r das Demonstrationsexperiment.</p>
+  <p align="justify" class="Stil8">&nbsp;</p>
+</blockquote>
+<blockquote>
+  <p align="justify" class="Stil8">&nbsp;</p>
+</blockquote>
+<p align="justify" class="text-normal">Originaldaten aus dem Experiment: <a href="QKD-Zufall.txt" target="_blank">Zufallsdaten f&uuml;r Polarisationsdreher</a>, <a href="QKD-Einzelereignisse.txt" target="_blank">Einzelereignisse</a>, <a href="QKD-Konti.txt" target="_blank">kontinuierliche Ereignisse</a></p>
+<p align="left" class="Stil8">&nbsp;</p>
+<p align="left" class="Stil8">&nbsp;</p>
+<p align="left" class="text-normal">Zum Kapitel 4:Ablauf, Forschung und Einzelphotonenquelle [<a href="../Forschung/index.html">klick</a>]<br>
+  <br>
+    <a href="../index.html">Zur&uuml;ck zur &Uuml;bersicht</a></p>
+<p align="left" class="Stil8">&nbsp;</p>
+<p align="left" class="notizen">Autor: P. Bronner, August 2008</p>
+<blockquote>&nbsp;</blockquote>
+<span class="notizen"><img alt="" src="http://www.didaktik.physik.uni-erlangen.de/quantumlab/Homepagestatistik/aufruf.php?name=Kryptographie-QKD-index.html&amp;lng=deutsch"></span>
+</body>
+
+
+<!-- Mirrored from quantumlab.nat.fau.de/Kryptographie/QKD/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Nov 2022 15:50:46 GMT -->
+</html>

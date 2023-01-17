@@ -1,0 +1,187 @@
+<!-- saved from url=(0022)http://internet.e-mail -->
+<html>
+
+<!-- Mirrored from quantumlab.nat.fau.de/english/cryptography/research/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Nov 2022 15:52:08 GMT -->
+<head>
+<title>Forschung</title>
+</script>
+
+<script src="../../Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+<link href="../../../Frames/Stylesheet.css" rel="stylesheet" type="text/css">
+<script src="../../frames/Frameset_nachladen.js" type="text/javascript"></script>
+</head>
+<body onLoad='checkFrameset()'>
+<p align="center" class="ueberschrift"><br>
+  Quantum cryptography chapter 4:<br>
+  Flow, research and single photon source</p>
+<p align="left" class="Stil8">&nbsp;</p>
+<p align="justify" class="text-normal">In the last chapter on <a href="../QKD-Einfuehrung/index.html">code distribution</a> with two bases it is shown that the system with single photons offers 100% security because of the possible detection of spies. On this page, the basic knowledge of the preceeding chapters is furthered in brief sections. </p>
+<p align="justify" class="text-normal"><br>
+</p>
+<blockquote>
+  <table width="100%" border="0">
+    <tr>
+      <td colspan="2" class="text-ueberschrift">Furthering of basic knowledge:</td>
+    </tr>
+    <tr>
+      <td width="11%" class="text-normal">Section 1:</td>
+      <td width="89%" class="text-normal"><a href="#Ablauf">The precise flow of quantum cryptography</a></td>
+    </tr>
+    <tr>
+      <td class="text-normal">Section 2:</td>
+      <td class="text-normal"><a href="#Entwicklung">From the first proposal to current research</a></td>
+    </tr>
+    <tr>
+      <td class="text-normal"> Section 3: </td>
+      <td class="text-normal"><a href="#Freistrahlstrecke">Connection via open jet section or glass fibre cable?</a></td>
+    </tr>
+    <tr>
+      <td class="Stil8">&nbsp;</td>
+      <td class="Stil8">&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="2" class="text-ueberschrift">Furthering of advanced knowledge:</td>
+    </tr>
+    <tr>
+      <td class="text-normal">Section 4:</td>
+      <td class="text-normal"><a href="#Phase">Encoding the photons with the phase</a></td>
+    </tr>
+    <tr>
+      <td class="text-normal">Section 5:</td>
+      <td class="text-normal"><a href="#Einzelphotonenquelle">The single photon source in the demonstration experiment</a></td>
+    </tr>
+    <tr>
+      <td class="text-normal">Section 6:</td>
+      <td class="text-normal"><a href="#Koinzidenzen">Coincidences in the demonstration experiment</a></td>
+    </tr>
+  </table>
+</blockquote>
+<table width="100%" border="0">
+  <tr></tr>
+</table>
+<p align="justify" class="text-normal"><a name="Ablauf" id="Ablauf"></a></p>
+<p align="justify" class="Stil8">&nbsp;</p>
+<p align="justify" class="Stil8">&nbsp;</p>
+<p align="left" class="text-ueberschrift">Section 1: The exact process of quantum cryptography</p>
+<blockquote>
+  <p align="justify" class="text-normal">In order to make quantum cryptography secure from the start, the following procedure for the BB84 protocol must be complied with precisely:</p>
+  <table width="100%" border="1" bordercolor="#333333">
+    <tr>
+      <td width="9%" height="77" bordercolor="#999999" bgcolor="#FFFFFF" class="text-normal">Step 1</td>
+      <td width="25%" bordercolor="#999999" bgcolor="#FFFFFF" class="text-normal">Authentification</td>
+      <td width="66%" bordercolor="#999999" bgcolor="#FFFFFF" class="Stil8"><div align="justify" class="text-normal">Alice and Bob first exchange a previously determined code using single photons. This preassigned code guarantees that really only these two individuals communicate directly. If the code transmitted does not coincide, Eve has creeped in and pretends to be Bob (addressing Alice) or Alice (addressing Bob). </div></td>
+    </tr>
+    <tr>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="text-normal">Step 2</td>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="text-normal">Code transmission</td>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="Stil8"><div align="justify" class="text-normal">Alice and Bob randomly select the bases and transmit the code with single photons. The real transmission is carried out afterwards.</div></td>
+    </tr>
+    <tr>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="text-normal">Step 3</td>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="text-normal">Deleting faulty bases</td>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="Stil8"><div align="justify" class="text-normal">Alice and Bob communicate in public so as to delete the measurements with  differing bases. While doing this, they only unveil the bases and not the transmitted and measured bits.</div></td>
+    </tr>
+    <tr>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="text-normal">Step 4</td>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="text-normal">Testing for spies</td>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="Stil8"><div align="justify" class="text-normal">Alice and Bob compare some of the bits transferred with the same base. If the error rate is higher than 25%, that is conclusive evidence that a spy has managed to creep in, so the code transmitted is deleted.  The bits that were used to detect the spy are deleted from the real code.</div></td>
+    </tr>
+    <tr>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="text-normal">Step 5</td>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="text-normal">Filtering of errors</td>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="Stil8"><div align="justify" class="text-normal">Due to measurement errors, not all bits are exactly alike even when the same bases were chosen. Algorithms for error correction (e. g. the parity test) filter out these faulty bits.  The code is obviously reduced by these tests, but at least it is free of errors. Additionally, different algorithms are applied to enhance the security of the code (privacy protection booster).</div></td>
+    </tr>
+    <tr>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="text-normal">Step  6</td>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="text-normal">Code for authentication</td>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="Stil8"><div align="justify" class="text-normal">At the end of the code generation process, some bits are taken from the transmitted and filtered data. These bits are used for authentication purposes at the next start of the quantum cryptography system. </div></td>
+    </tr>
+    <tr>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="text-normal">Step 7</td>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="text-normal">Encoding the message</td>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="Stil8"><div align="justify" class="text-normal">It is only now that Alice encodes the real and confidential message with the generated code by binary addition.</div></td>
+    </tr>
+    <tr>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="text-normal">Step 8</td>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="text-normal">Sending the message</td>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="Stil8"><div align="justify" class="text-normal">The encoded message is now sent publicly from Alice to Bob.</div></td>
+    </tr>
+    <tr>
+      <td height="42" bordercolor="#999999" bgcolor="#FFFFFF" class="text-normal">Step 9</td>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="text-normal">Decoding the message</td>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="Stil8"><p align="justify" class="text-normal">Bob decodes the secret message with his code by binary addition. If the procedure above was complied with in all manners, the encoding was 100% secure.</p></td>
+    </tr>
+  </table>
+  <p align="justify" class="text-normal"><br>
+    Steps 1-6 only serve for generating the secret code using quantum physics. As, at the beginning of the authentication process, a part of the code is always transmitted (step 1), this process is really only a code growth. It is only in steps 7-9 that the real cryptography takes place, where quantum physics is no longer required.  The entire system can be operated fully automatic by means of quantum random generators and electro-optical polarization rotators. The data rate in the commercially available quantum cryptography systems with fiber glass cables currently is ca. 1,5 kBit/s [IdQ08] at a range of 25km.</p>
+  <p align="justify" class="Stil8">    <span class="text-normal"><a name="Entwicklung" id="Ablauf2"></a></span></p>
+</blockquote>
+<p align="justify" class="Stil8">&nbsp;</p>
+<p align="justify" class="Stil8">&nbsp;</p>
+<p align="left" class="text-ueberschrift">Section 2: From the first proposition to current research</p>
+<p align="left" class="text-normal">The first theoretical proposition on quantum cryptography was published by the scientists Bennet and Brassard [Ben84] in 1984. The proposition has since then been known as the BB84 protocol. In 1992, the suggested protocol was realized experimentally for the first time with an open jet passage of 30cm [Ben92].  As early as in 2001, a system with a coverage of 1.9km and a raw data rate of 33kBit/s was tested [Rar01].  In  2002, a group of scientists from Munich succeeded in transmitting the key securely from the Zugspitze mountain top [Kur02]. The transmission distance was 23.4 km in clear mountain air with no turbulences. The same system was tested in 2006 over the rooftops of Munich in turbulent and polluted city air at a transmission distance of 480m [Wei06].  In 2007, the safe key distribution was successfully carried out between the islands of La Palma and Tenerife [Sch07]. The transmission distance here was 144km through clear sea air.<br>
+    <a name="Freistrahlstrecke" id="Ablauf3"></a></p>
+<blockquote>&nbsp;</blockquote>
+<p align="justify" class="Stil8">&nbsp;</p>
+<p align="justify" class="Stil8">&nbsp;</p>
+<p align="justify" class="text-ueberschrift">Section  3: Connection via open jet passage or fiber glass cable?</p>
+<blockquote>
+  <p align="justify" class="text-normal">    The quantum cryptography systems described before used polarization (vertically polarized = 0, horizontally polarized = 1) for the encoding process. The systems worked flawlessly in free and direct line of sight between sender and receiver. If heavy fog, plenty of dust or smog was in the air, most photons were diffused during transmission and no longer reached the receiver. By these natural environmental impacts, the cryptography systems are greatly limited regarding the transmission rate or are even rendered completely inoperative. For everyday communication, the transmission passage should be independent of environmental impacts. Most suitable for this are fiber glass cables which can be run underground. Normal fiber glass cables do, however, have the awkward characteristic that the polarization does not remain the same. Depending on the bending or stretching of the fiber glass, the polarization of light changes. For quantum cryptography with polarization encoding, freely run fiber glass cables are therefore not suitable. An eligible alternative is the encoding of photons over the phase, as it does not change in the fiber glass cable. The steps described in the <a href="#Ablauf">upper section </a>on the process of quantum cryptography remain the same for phase encoding as they were for polarization encoding.<br>
+      <a name="Phase" id="Ablauf4"></a></p>
+</blockquote>
+<p align="justify" class="Stil8">&nbsp;</p>
+<p align="justify" class="Stil8">&nbsp;</p>
+<p align="justify" class="text-normal"><span class="text-ueberschrift">Advanced skills:</span><br>
+  <br>
+</p>
+<p align="justify" class="text-ueberschrift">Section 4: Encoding the photons via the phase</p>
+<blockquote>
+  <p align="justify" class="text-normal">Instead of encoding photons by polarization, we can also use the phase &phi; for encoding the photons. The system for quantum cryptography via the phase &phi;  works with the quantum phenomenon <a href="../../Interferenz/index.html">single photon interference</a> in the interferometer. For quantum cryptography with phase encoding, a large Mach-Zehnder interferometer is split up into two interferometers. One  interferomteter is placed on Alice's side, the other on Bob's side (pic. 1). In each interferometer, the phase is altered via an additional optical element in an interferometer arm.</p>
+  <p align="justify" class="text-normal">The phase difference &Delta;&phi; = &phi;Alice - &phi;Bob of the two interferometers is used for the unambiguous information transmission. The phase difference &Delta;&phi;=0 correlates with the binary &quot;0&quot;, the phase difference &Delta;&phi;=&pi; correlates with the binary &quot;1&quot;. The complete system of quantum cryptography via the phase requires precise interferometric stability.</p>
+  <p align="justify" class="Stil8">&nbsp;</p>
+  <p align="center" class="text-normal"><img src="SchemaQKD.jpg" width="746" height="253"><br>
+  pic. 1: Quantum cryptography with single photons and phase encoding</p>
+  <p align="justify" class="Stil8">&nbsp;</p>
+  <p align="justify" class="text-normal">As the phase of single photons is not altered in a fiber glass, the transmission between Alice and Bob can be carried out in a normal fiber glass cable. A direct line of sight like with polarization encoding is not needed. Leadoff systems were tested in Switzerland between the cities of Lausanne and Geneva in 2002  [Stu02]. The fiber glass cable between the cities had a length of 67km in this experiment. Plug-and-play systems for quantum cryptography via the phase are already commercially available with fiber glass cables today [IdQ08]. In Switzerland, those systems are already in serial use for transmitting important information [Pat07].</p>
+  <p align="justify" class="text-normal">Apart from the quantum cryptography systems with one single photon each, as described here, there are also systems of quantum cryptography with <a href="../../Verschraenkung/index.html">entangled photon pairs </a>  [Eke91] or with continuous variables [Ral00]. Quantum cryptography with entangled photon pairs is discussed in detail in the next chapter <a href="../V-QCD/index.html">(chapter_5</a>). A technically  complex and very good overview of the systems of quantum cryptography and the current state of the art is given in the articles of Gisin and Tittel [Gis02] or by Lo and L&uuml;tkenhaus [Lo07].<br>
+      <a name="Einzelphotonenquelle" id="Ablauf5"></a></p>
+  <p align="justify" class="Stil8">&nbsp;</p>
+</blockquote>
+<p align="justify" class="Stil8">&nbsp;</p>
+<p align="justify" class="text-ueberschrift">Section  5: The single photon source in the demonstration experiment </p>
+<blockquote>
+  <p align="justify" class="text-normal">The security of quantum cryptography systems is only guaranteed if per pulse one single photon is transmitted.    The single photon source at the push of a button is, however, still a matter of intensive research. For our demonstration experiment of quantum cryptography (see <a href="../QKD-Einfuehrung/index.html">chapter 2</a> and <a href="../QCD/index.html">3</a>), we use a photon pair source which announces single photons via a trigger (pic. 2). This photon pair source is described in detail, mentioning the exact photon statistics, in the chapter <a href="../Existenz/index.html">existence_of_the photons</a>. One photon of the photon pair from the crystal is used for triggering, while the other photon is coupled into a polarization-maintaining fiber glass cable and lead to the actual quantum cryptography system. In our experiment, the blue-pulsed laser (405nm), on the push of a button, sends a single pulse for generating the photon pairs.  After each individual laser pulse, the direction of the polarization rotator in the quantum cryptography system has to be newly adjusted, as there could always be a photon at hand. For the interactive experiments, all datasets which did not have any coincidence events were deleted. Alternatively, the announced single photon source can be replaced by a single photon source with a color center [Bev02].</p>
+
+  <p align="justify" class="Stil8">&nbsp;</p>
+  <p align="center" class="text-normal"><img src="QuelleII.jpg" alt="fs" width="512" height="334"></p>
+  <p align="center" class="text-normal">pic. 2: Photon pair source for quantum cryptography<br>
+  left branch: detector for triggering, right branch: coupling into the fiber glass cable</p>
+  <p align="justify" class="text-normal"><br>
+  For the experiments mentioned in the <a href="#Entwicklung">section above</a>, with open jet passages of up to zu 144km, diminished laser pulses are used for the BB84 protocol. These individual laser pulses can, however, include two or more photons. A spy could extract single photons from each transmitted pulse using a beam splitter, completely unnoticed, and measure it. The safety of secure key transmission is massively infringed upon due to this beam splitter attack. Possible solutions to the beam splitter attack problem are decoy state protocols. With these decoy state protocols, normal pulses for information transmission are sent along with additional pulses. These additional pulses help detect such a beam splitter attack [Hwa03], [Zha06], [Mau07], e.g. by measuring the <a href="../Existenz/index.html#Zugang4">photon statistics</a>.<br>
+    <a name="Koinzidenzen" id="Ablauf6"></a></p>
+</blockquote>
+<p align="justify" class="Stil8">&nbsp;</p>
+<p align="justify" class="Stil8">&nbsp;</p>
+<p align="justify" class="text-ueberschrift">Section 6: Coincidences in the demonstration experiment</p>
+<blockquote>
+  <p align="justify" class="text-normal">In	our interactive demonstration experiment on quantum cryptography (see <a href="../QKD-Einfuehrung/index.html">chapters 2</a> and <a href="../QCD/index.html">3</a>), each photon sent is registered.  This is achieved in our real demonstration experiment by having the blue 405nm laser in front of the crystal send out single pulses after activating the pushbutton &quot;single measurement&quot; until a coincidence is registered between the detector trigger and the detector behind the beam splitter. After that, the pulsed laser switches into idle mode and can be started again with the pushbutton. The coincidence measured is shown via lamps on the detectors. If the laser were to send out only a single light pulse at each activation of the pushbutton, very often there would be no coincidence, or only a single detection at the trigger detector or at the detectors behind the beam splitter. The lamps would remain dark for most single pulse pushbutton-strokes. This is due to the minor conversion efficiency in the crystal, as well as to the suboptimal coupling into the fiber glass cable, to the diffusion of the photons on the transmission route and to the substandard detector efficiency.  For the correct use, after each laser pulse the direction of the polarization rotator must be randomly changed. In order to make the principle of quantum cryptography generally understandable, we bypass these problems by recurring laser pulses until we get a coincidence. </p>
+</blockquote>
+<blockquote>
+  <p align="justify" class="Stil8"></p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+</blockquote>
+<p align="left" class="text-normal">To chapter  5: <a href="../V-QCD/index.html">Quantum cryptography with entangled photons</a><br>
+  <br>
+Back to overview [<a href="../index.html">klick</a>]</p>
+<p align="left" class="Stil8">&nbsp;</p>
+<p align="left" class="notizen">Autor: P. Bronner, August 2008<br>
+  Translation: G. Murphy</p>
+<p align="left" class="Stil13">&nbsp;</p>
+<blockquote>&nbsp;</blockquote>
+<span class="notizen"><img alt="" src="http://www.didaktik.physik.uni-erlangen.de/quantumlab/Homepagestatistik/aufruf.php?name=Kryptographie-Forschung-index.html&amp;lng=englisch"></span>
+</body>
+
+
+<!-- Mirrored from quantumlab.nat.fau.de/english/cryptography/research/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Nov 2022 15:52:09 GMT -->
+</html>

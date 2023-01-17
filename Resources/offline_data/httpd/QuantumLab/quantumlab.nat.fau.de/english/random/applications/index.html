@@ -1,0 +1,87 @@
+<!-- saved from url=(0022)http://internet.e-mail -->
+<html>
+
+<!-- Mirrored from quantumlab.nat.fau.de/english/random/applications/index.htm by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Nov 2022 15:51:45 GMT -->
+<head>
+<title>Quantenzufall</title>
+</script>
+
+<script src="../../Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+<link href="../../../Frames/Stylesheet.css" rel="stylesheet" type="text/css">
+<script src="../../frames/Frameset_nachladen.js" type="text/javascript"></script>
+</head>
+<body onLoad='checkFrameset()'>
+<p align="center" class="ueberschrift">	<br>
+  Quantum Random Chapter 2: <br> 
+Test, Application, Commercial Systems</p>
+<p align="left" class="Stil8">&nbsp;</p>
+<p align="justify" class="text-normal"> On this page, the random numbers recorded in the <a href="../1BS/index.html">last chapter</a> are tested. As an application of random numbers, quantum music according to Mozart is presented. Finally, the difference between commercially availabe quantum random generators and our system is described.</p>
+<p align="left" class="Stil8">&nbsp;</p>
+<p align="left" class="text-ueberschrift">Test of randomness</p>
+<blockquote>
+  <p align="justify" class="text-normal">For sensitive applications like e. g. <a href="../../cryptography/index.html">cryptography</a>, the random numbers must be absolutely random. How can it be tested whether or not the quantum random number is absolutely random? Unfortunately there is no test method which proves absolute randomness. The recorded random number can only be tested on repetition, correlations or patterns. Even if a random number passes e. g. 20 different tests, this is no proof of absolute randomness.</p>
+  <p align="justify" class="text-normal">For the application in school, tests to be watched could be the frequency of decimal numbers, possible development of patterns in 2D or 3D diagrams or the frequency of identical following binary numbers (0, 00, 000, 0000, ...). It is also a good idea to calculate Pi with the Monte Carlo method. The quantum random numbers can be compared with computer-generated pseudo-random numbers here. In our laboratory, for each quantum random experiment for school lessons, a suitable test report with the comparison between quantum and pseudo-random numbers can be generated automatically [<a href="Quantum_Random.pdf">example in German</a>].</p>
+  <p align="justify" class="text-normal">For industrial use, there are the commercial test methods of the &quot;National Institute of Standards and Technology (NIST)&quot; [Nis08].  The test includes 15 individual test methods in which pattern formation or the correlation of random numbers is tested. The  NIST test is deemed the standard test for pseudo random numbers with computer scientists. We have recorded 100MBit of binary quantum random numbers.    The dataset has successfully passed all 15 NIST tests without being priorly edited (e. g. with the von-Neumann-algorithm [Neu51]). With this test, the quantum random numbers can be considered random with a 99,9 % reliability. The test protocol can be downloaded here [<a href="Analysis_08.05.2009_NIST-test.pdf" target="_blank">PDF</a>]. Further test methods like e. g. the Diehard-Test [Mar95] have also been carried out successfully.</p>
+</blockquote>
+<p align="justify" class="Stil8">&nbsp;</p>
+<p align="justify" class="Stil8">&nbsp;</p>
+<p align="left" class="text-ueberschrift">Quantum music according to Mozart</p>
+<blockquote>
+  <p align="justify" class="text-normal">Random numbers have their place in many areas: in cryptography for generating codes, in industry and research for simulation purposes, in our daily lives with mobile phones, computer games and bank transfers, ... . Random numbers can also be used in music. In the year 1793, the musical dice game by Mozart came out [Moz93]. With this musical game, a piece of music can be composed by throwing a normal pair of dice 16 times. An allocation table matches each number of pips with a beat. The allocation table contains 176 different beats, so that 46 quadrillions of different compositions can be gained. We have combined the musical dice game with the quantum random generator: As soon as ca. 100 binary random numbers (1 or 0) have been generated in our laboratory, &quot;quantum music according to Mozart&quot; is played. The piece of music is composed by the random decision of single photons at the beam splitter. The instruments can be chosen at will. The program &quot;quantum music&quot; resulted from Andreas Strunz' thesis. In the lower example, five quantum music pieces composed by photons can be listened to. After each cycle, the next piece is loaded.<br>
+  </p>
+  <p align="justify" class="text-normal"><br>
+  </p>
+</blockquote>
+<table width="100%" border="0">
+  <tr>
+    <td><div align="center">
+      <span class="text-normal">
+      <script type="text/javascript">
+AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0','width','800','height','165','src','Mozart_EN','quality','high','pluginspage','http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash','movie','Mozart_EN' ); //end AC code
+      </script>
+      <noscript>
+      <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="800" height="165">
+        <param name="movie" value="Mozart_EN.swf">
+        <param name="quality" value="high">
+        <embed src="Mozart_EN.swf" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="800" height="165"></embed>
+      </object>
+      </noscript>
+    </span></div></td>
+  </tr>
+</table>
+<p align="left" class="Stil8">&nbsp;</p>
+<p align="left" class="Stil8">&nbsp;</p>
+<p align="left" class="text-ueberschrift">Commercial quantum random generators</p>
+<blockquote>
+  <p align="justify" class="text-normal">The first quantum random generator has been realized by radioactive decay [Ino83]  in 1983. Quantum random generators with single photon detectors have been out since 1994 [Rar94], [Ste99], [Jen00], [Sou03].  All experiments do, however, work with dimmed laser light. The idQuantique company has recently started selling quantum random generators as complete USB modules (pic. 1) at prices starting at ca. 600 &euro;   [Idq08]. The module does not require external power supply and only has to be connected up to the computer with a USB cable. There are a dimmed laser, a beam splitter cube and two detectors in the module. Per second, 4MBit random numbers are generated.<br>
+    <br>
+  Why do we need a massive big table and many optical components for our quantum random generator at all (see above) if there is a much easier way? The USB module of the idQuantique company works with dimmed laser light, which is directed onto a beam splitter cube and activates the two detectors. Activating the detectors would, however, also be possible with e. g. thermal energy. For our quantum random experiment it is important that initially, single photons are prepared. We intentionally create the random process by a single photon at the beam splitter (qubit-state).  With dimmed laser light, the preparation of single photons and the qubit state is not possible (see under <a href="../../Grundlagen/index.html"> basics</a>). The light in experiments with dimmed laser light can be described classically as an e-m wave. The quantization of the field is not necessary. The quantum random generator is a good solution for many practical applications, but it does not fulfil the concept of single photon quantum random at the beam splitter cube.</p>
+  <p align="justify" class="text-normal"> The experiment set up by us on the quantum random generators with single announced photons has been published for the first time in 2004 [Hai04]. Photonic quantum random generators can also be realized with entangled photons [Owe08] and with the Hong-Ou-Mandel interference [Kwo09]. </p>
+</blockquote>
+<blockquote>
+  <p align="justify" class="Stil8">&nbsp;</p>
+  <p align="center" class="text-normal"><img src="Quantis.jpg" alt="Quantis - idQuantique" width="682" height="306"><br>
+  </p>
+  <p align="center" class="text-normal">pic. 1: Quantum random generator &quot;Quantis&quot; by the idQuantique company - <br>
+  1&euro; coin for size comparison purposes</p>
+  <p align="justify" class="Stil8">&nbsp;</p>
+  <p align="justify" class="Stil8">&nbsp;</p>
+</blockquote>
+<p align="justify" class="text-normal">Test protocol for the test on the random number: <a href="Quantum_Random.pdf" target="_blank">School application</a>, <a href="Analysis_08.05.2009_NIST-test.pdf" target="_blank">industry test NIST</a><br>
+Quantum music according to Mozart (mp3): <a href="1.mp3">piece 1</a>, <a href="2.mp3"><a href="2.mp3">piece 2</a>, <a href="3.mp3"><a href="2.mp3">piece 3</a>, <a href="4.mp3"><a href="2.mp3">piece 4</a>, <a href="5.mp3"><a href="2.mp3">piece 5</a></p>
+<p align="justify" class="Stil8">&nbsp;</p>
+<p align="justify" class="text-normal">To the next chapter: Quantum random at two beam splitter cubes  [<a href="../2BS/index.html">klick</a>]<br>
+Back to the overview [<a href="../index.html">klick</a>]</p>
+<p align="justify" class="text-normal"><a href="5.mp3"><br>
+</a></p>
+<p align="justify" class="Stil8">&nbsp;</p>
+<p align="justify" class="notizen">Author: P. Bronner, A. Strunz, Mai 2009<br>
+  Translation: G. Murphy, June 2009<br>
+</p>
+<p align="justify" class="Stil12">&nbsp;</p>
+<span class="notizen"><img alt="" src="http://www.didaktik.physik.uni-erlangen.de/quantumlab/Homepagestatistik/aufruf.php?name=Quantenzufall-Anwendung.html&amp;lng=englisch"></span>
+</body>
+
+
+<!-- Mirrored from quantumlab.nat.fau.de/english/random/applications/index.htm by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Nov 2022 15:51:47 GMT -->
+</html>

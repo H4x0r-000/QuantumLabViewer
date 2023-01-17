@@ -1,0 +1,79 @@
+<html>
+
+<!-- Mirrored from quantumlab.nat.fau.de/Kryptographie/V-QKD/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Nov 2022 15:50:47 GMT -->
+<head>
+<title>Verschr&auml;nkungs-Quantenkryptographie</title>
+</script>
+
+<script src="../../Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+<link href="../../Frames/Stylesheet.css" rel="stylesheet" type="text/css">
+<script src="../../Frames/Frameset_nachladen.js" type="text/javascript"></script>
+</head>
+<body onLoad='checkFrameset()'>
+<p align="center" class="Stil14"><span class="ueberschrift"><br>
+  Quantenkryptographie Kapitel 5:</span><br>
+  <span class="unterueberschrift">Quantenkryptographie mit verschr&auml;nkten Photonen</span></p>
+<p align="left" class="Stil8">&nbsp;</p>
+<p align="justify" class="text-normal">In den letzten Kapiteln zur Quantenkryptographie wurde das BB84-Protokoll mit einzelnen Photon ausf&uuml;hrlich erl&auml;utert. Auf dieser Seite geht es um Quantenkryptographiesysteme mit verschr&auml;nkten Photonen. Die Idee f&uuml;r die Quantenkryptographie mit verschr&auml;nkten Photonen wurde 1991 von dem Wissenschaftler Ekert ver&ouml;ffentlicht [Eke91] und als Ekert Protokoll bezeichnet. Sowohl das Ekert-Protokoll mit verschr&auml;nkten Photonen als auch das BB84 Protokoll mit einzelnen Photonen verwenden das Kryptographieverfahren One-Time-Pad. Beide Protokolle unterscheiden sich nur durch die Erzeugung des Schl&uuml;ssels. F&uuml;r diese Seite wird  das Wissen aus den Experimenten zur <a href="../../Verschraenkung/index.html">Verschr&auml;nkung</a> vorrausgesetzt. </p>
+<p align="justify" class="Stil8">&nbsp;</p>
+<p align="justify" class="text-ueberschrift">Verschr&auml;nkungs-Quantenkryptographie: Ablauf der Schl&uuml;sselerzeugung</p>
+<blockquote>
+  <p align="justify" class="text-normal">F&uuml;r das Verschr&auml;nkungsprotokoll werden drei Parteien ben&ouml;tigt: Ein Sender f&uuml;r verschr&auml;nkte Photonenpaare und zwei Empf&auml;nger  (Alice und Bob) zur Messung der beiden Photonen.  Der experimentelle Aufbau f&uuml;r die Verschr&auml;nkungsquantenkryptographie (Abb. 1, Abb.2) ist exakt der gleiche wie bei den Experimenten zum Nachweis der Verschr&auml;nkung. Die Eigenschaften von verschr&auml;nkten Photonenpaaren und der experimentelle Aufbau sind ausf&uuml;hrlich im Abschnitt <a href="../../Verschraenkung/index.html">Verschr&auml;nkung</a> beschrieben. Alice und Bob besitzen in ihrer Empfangseinheit  einen Polarisationsdreher und  einen polarisierenden Strahlteilerw&uuml;rfel (Abb. 1). F&uuml;r das Verschr&auml;nkungs-Quantenkryptographiesystem k&ouml;nnen am Polarisationsdreher von Alice nur die beiden Winkel 0&deg; und 30&deg; eingestellt werden. Am Polarisationsdreher von Bob k&ouml;nnen nur die beiden Winkel 30&deg; und 60&deg; eingestellt werden.</p>
+  <p align="justify" class="Stil8">&nbsp;</p>
+  <p align="center" class="text-normal"><img src="Skizze.jpg" width="438" height="382"><br>
+    <br>
+  Abb. 1: Quantenkryptographie mit verschr&auml;nkten Photonen</p>
+  <p align="left" class="Stil8">&nbsp;</p>
+  <p align="justify" class="text-normal">Alice und Bob  stellen zuf&auml;llig und unabh&auml;ngig voneinander die beiden Winkel an ihrem Polarisationsdreher ein. Insgesamt gibt es vier M&ouml;glichkeiten der Kombination (Tab. 1). Stimmen die Winkel von Alice und Bob &uuml;berein, so machen beide Photonen am Strahlteiler exakt das gleiche: Beide Photonen  werden   entweder transmittiert (bin&auml;r 1) oder beide Photonen  werden  reflektiert (bin&auml;r 0). Ob beide Photonen am Strahlteiler transmittiert oder reflektiert werden, erfolgt absolut zuf&auml;llig (Quantenzufall). Dieses zuf&auml;llige Verhalten  kann im Abschnitt <a href="../../Verschraenkung/index.html">Verschr&auml;nkung</a> unter <a href="../../Verschraenkung/Grundlagen/index.html">Grundlagen</a> direkt am Experiment beobachtet werden. Der Schl&uuml;ssel kann nur bei einer von vier Winkelkombinationen  generiert werden. Die restlichen drei Winkelkombinationen werden zur Aufdeckung eines Spions verwendet.</p>
+  <p align="justify" class="Stil8">&nbsp;</p>
+  <p align="center" class="text-normal"><img src="TabelleV.jpg" width="484" height="139"><br>
+    Tab. 1: Einstellung der Polarisationsdreher und Verwendung</p>
+  <p align="center" class="Stil8">&nbsp;</p>
+  <p align="center" class="Stil8">&nbsp;</p>
+</blockquote>
+<p align="left" class="text-ueberschrift"> Verschr&auml;nkungs-Quantenkryptographie: Angriffe durch Spione </p>
+<blockquote>
+  <p align="justify" class="text-normal">Ein Spion k&ouml;nnnte den Schl&uuml;sselaustausch  manipulieren und dadurch unbemerkt den Schl&uuml;ssel erhalten. Dazu muss der Spion die Quelle f&uuml;r verschr&auml;nkte Photonenpaare durch seine eigene Quelle mit nicht verschr&auml;nkten Photonenpaaren ersetzen. Bei nicht verschr&auml;nkten Photonenpaaren kennt der Sender die jeweilige Polarisation der Photonenpaare und kann diese variieren. Um Alice und Bob verschr&auml;nkte Photonenpaare vorzut&auml;uschen, variiert der Spion die ausgesendeten Photonen zuf&auml;llig zwischen den Winkeln 30&deg; f&uuml;r die bin&auml;re 1 und -60&deg; f&uuml;r die bin&auml;re 0. F&uuml;r Alice und Bob gibt es bei der gleichen Winkeleinstellung von je 30&deg; keine M&ouml;glickeit den Unterschied zwischen  verschr&auml;nkten und  nicht verschr&auml;nkten Photonenpaaren zu bemerken. Die Erzeugung von verschr&auml;nkten und nicht verschr&auml;nkten Photonenpaaren wird ausf&uuml;hrlich im Abschnitt <a href="../../Verschraenkung/index.html">Verschr&auml;nkung</a> unter  <a href="../../Verschraenkung/Erzeugung/index.html">Erzeugung</a> diskutiert.  <br>
+  Alice und Bob m&uuml;ssen nun eine M&ouml;glichkeit besitzen die Manipulation des Spion in der Quelle aufzudecken. Ein eindeutiges Zeichen f&uuml;r verschr&auml;nkte Photonen ist die Verletzung der <a href="../../Verschraenkung/Nichtlokalitaet/index.html">Bell-Ungleichung</a>. Verschr&auml;nkte Photonenpaare liegen nur dann vor, wenn die Bell-Ungleichung verletzt wird. Bei nicht verschr&auml;nkten Photonenpaaren wird diese Ungleichung nicht verletzt. Alice und Bob besitzen somit ein eindeutiges Kriterium, um einen Spion aufzudecken. Die Verschr&auml;nkung kann mit verschiedenen Versionen der Bell-Ungleichung (<a href="../../Verschraenkung/Nichtlokalitaet/index.html#CHSH">CHSH</a>, <a href="../../Verschraenkung/Nichtlokalitaet/index.html#Bell">Wigner</a>, <a href="../../Verschraenkung/Nichtlokalitaet/index.html#Hardy">Hardy</a>) &uuml;berpr&uuml;ft werden.  F&uuml;r das folgende Beispiel wird die Version von <a href="../../Verschraenkung/Nichtlokalitaet/index.html#Bell">Wigner</a> [Wig70] gew&auml;hlt. Die Gleichung wird im Abschnitt <a href="../../Verschraenkung/index.html">Verschr&auml;nkung</a> unter <a href="../../Verschraenkung/Nichtlokalitaet/index.html">Nichtlokali&auml;t</a> erkl&auml;rt. Sobald die folgende Wigner Ungleichung   verletzt ist, k&ouml;nnen sich Alice und Bob sicher sein, dass kein Spion in der Quelle die Photonen manipuliert hat.</p>
+  <p align="center" class="text-normal"><img src="Tab.jpg" width="359" height="34"></p>
+  <p align="justify" class="text-normal">Die gew&auml;hlten Winkel f&uuml;r die Wigner-Unglichung h&auml;ngen vom Verschr&auml;nkungszustand der Photonenpaarquelle ab. Unsere Photonenpaarquelle (Typ I-Quelle) emittiert den<a href="../../Verschraenkung/Bell/index.html"> Bell-Zustand &Phi;+</a>. Die Daten zur Berechnung der Wigner-Ungleichung bekommen Alice und Bob aufgrund der zuf&auml;llig gew&auml;hlten verschiednenen Winkeleinstellungen der Polarisationsdreher (Tabelle 1). Wenn die Messwinkel verschieden sind, wird mit diesen Daten  nach Abschluss der &Uuml;bertragung die Wigner-Ungleichung berechnet. Bei gleichen Messwinkeln werden die Daten zur Schl&uuml;sselerzeugung verwendet. Alle aufgenommenen Daten finden beim Verschr&auml;nkungsprotokoll Verwendung. </p>
+  <p align="justify" class="Stil8">&nbsp;</p>
+  <p align="justify" class="Stil8">&nbsp;</p>
+</blockquote>
+<p align="justify" class="text-ueberschrift">Verschr&auml;nkungs-Quantenkryptographie: Experiment</p>
+<blockquote>
+  <p align="justify" class="text-normal">Der Aufbau f&uuml;r das Realexperiment zur Verschr&auml;nkungs-Quantenkryptographie ist in Abbildung 2 dargestellt. Die Polarisationsdreher bei  Alice und Bob haben jeweils zwei feste Winkeleinstellungen:  0&deg; und 30&deg; bei Alice, 30&deg; und 60&deg; bei Bob. </p>
+  <p align="justify" class="text-normal"> Bei allen Systemen zur Quantenkryptographie muss der Laser einzelne Pulse aussenden. Nach jedem Puls des Lasers kann ein Photonenpaar erzeugt worden sein. Somit muss nach jedem Puls  die Einstellung der Polarisationsdreher zuf&auml;llig ge&auml;ndert werden. F&uuml;r unser Verschr&auml;nkungsexperiment ben&ouml;tigen wir einen 405nm Laser mit einer langen Koh&auml;renzl&auml;nge (single longitudinal and transversal mode diode laser). Dieser spezielle Laser kann nur kontinuierlich arbeiten - ein Pulsbetrieb ist nicht m&ouml;glich. Im kontinuierlichen Betrieb entstehen die verschr&auml;nkten Photonenpaare beliebig &uuml;ber die Zeit verteilt, wodurch der  Polarisationsdreher nicht f&uuml;r jedes m&ouml;gliche Photon individuell eingestellt werden kann. Ein pulsbarer Laser speziell f&uuml;r das Verschr&auml;nkungs- Quantenkryptographie vom Typ I ist sehr teuer und liegt weit &uuml;ber unserem Budget.</p>
+  <p align="justify" class="text-normal">Die <a href="../../Verschraenkung/Nichtlokalitaet/index.html#Bell">Wigner-Ungleichung</a> kann auch ohne pulsbaren Laser wiederlegt werden. Mit unserem kontinuierlichen Laser und fester Winkeleinstellung der Polarisationsdreher ergibt sich eine eindeutige Verletzung der Wigner-Ungleichung, womit verschr&auml;nkte Photonen vorliegen und ein Spion ausgeschlossen werden kann.<br>
+  </p>
+  <p align="center" class="text-normal"><img src="Formel-Wigner.jpg" width="356" height="84"><br>
+  </p>
+  <p align="justify" class="text-normal">Im Gegensatz zu unserem Verschr&auml;nkungsexperiment mit dem kontinuierlichen Laser wird das Experiment zur Quantenkryptographie mit einzelnen Photonen (BB84-Protokoll)  mit einem gepulsten Laser betrieben. Bei diesem Experiment werden zun&auml;chst einzelne nicht verschr&auml;nkte Photonenpaare in einem Kristall erzeugt (siehe unter <a href="../Forschung/index.html#Einzelphotonenquelle">Photonenquelle</a> f&uuml;r die Quantenkryptographie). Eines der beiden Photonen wird zum Triggern benutzt, das andere Photonen wird f&uuml;r das Quantenkryptographiesystem verwendet. F&uuml;r die Erzeugung von nicht verschr&auml;nkten Photonenpaaren ben&ouml;tigt der 405nm Laser keine Koh&auml;renzl&auml;nge und kann im Pulsbetrieb angesteuert werden. Die Einzelpulse des gepulsten Lasers haben ein L&auml;nge von 100ps. Der Laser kann einzelne Pulse  auf Knopfdruck oder mit einer Rate  bis zu 80MHz aussenden. Nach jedem einzelnen Laserpuls werden die Einstellungen der Polarisationsdreher zuf&auml;llig variiert.</p>
+  <p align="justify" class="Stil8">&nbsp;</p>
+  <p align="justify" class="Stil8">&nbsp;</p>
+  <p align="center" class="text-normal"><img src="V-Experiment.jpg" width="853" height="560"></p>
+  <p align="center" class="text-normal"> Abb. 2: Aufbau f&uuml;r ein Verschr&auml;nkungs-Quantenkryptographiesystem. <br>
+  </p>
+</blockquote>
+<p align="center" class="Stil8">&nbsp;</p>
+<p align="center" class="Stil8">&nbsp;</p>
+<p align="left" class="text-ueberschrift">Verschr&auml;nkungs-Quantenkryptographie: Von den Anf&auml;ngen zur aktuellen Forschung</p>
+<blockquote>
+  <p align="justify" class="text-normal">Der erste theoretische Vorschlag, um verschr&auml;nkte Photonen zur Quantenkryptographie einzusetzen, wurde 1991 von dem Wissenschaftler Ekert ver&ouml;ffentlicht [Eke91].  Erste Quantenkryptographiesysteme mit verschr&auml;nkten Photonen wurden im Jahr 2000 gebaut [Jen00-1].  Das System arbeitete mit einer Datenrate von 800 Bit/s, wobei  Alice und Bob in einem Labor 360m voneinander entfernt waren. Im Jahr 2004 wurde das Quantenkryptographiesystem mit verschr&auml;nkten Photonen zum ersten Mal unter Alltagsbedingungen getestet [Pop04]. Die Schl&uuml;ssel&uuml;bertragung fand bei diesem Experiment in einem 1,45km langen Glasfaserkabel zwischen einer Bank und der Stadthalle in Wien statt.  Im Jahr 2007 gelang eine  Schl&uuml;ssel&uuml;bertragung mit verschr&auml;nkten Photonen zwischen den Inseln La  Palma und Tenerifa &uuml;ber 144km [Urs07]. <br>
+    <br>
+    Im Jahr 
+2005 wurde der Vorschlag ver&ouml;ffentlicht,  die Verschr&auml;nkungsquelle direkt in Sateliten  zu installieren [Pfe05]. Auf der Erde k&ouml;nnten Alice und Bob mit Teleskopen die verschr&auml;nkten Photonen empfangen und messen. Dieser theoretische Vorschlag soll in den n&auml;chsten Jahren experimentell umgesetzt werden.</p>
+  <p align="justify" class="text-normal">Anstatt die Photonenpaare f&uuml;r die Quantenkryptographie mit der Polarisation zu verschr&auml;nken, k&ouml;nnen Photonenpaare auch &uuml;ber die  Phase &phi; verschr&auml;nkt werden [Fra89], [Eke92]. Ebenfalls m&ouml;glich ist  die Verschr&auml;nkungs-Quantenkrypographie &uuml;ber die  Energie - Zeit Verschr&auml;nkung [Bren99], [Mar04].</p>
+</blockquote>
+<p align="justify" class="Stil8">&nbsp;</p>
+<p align="left" class="Stil8">&nbsp;</p>
+<p align="justify" class="Stil8"> <span class="text-normal"><a href="../index.html">Zur&uuml;ck zur &Uuml;bersicht</a></span></p>
+<p align="left" class="Stil8">&nbsp;</p>
+<p align="left" class="notizen">Autor: P. Bronner, August 2008</p>
+<blockquote>&nbsp;</blockquote>
+<span class="notizen"><img alt="" src="http://www.didaktik.physik.uni-erlangen.de/quantumlab/Homepagestatistik/aufruf.php?name=Kryptographie-V-QKD-index.html&amp;lng=deutsch"></span>
+</body>
+
+
+<!-- Mirrored from quantumlab.nat.fau.de/Kryptographie/V-QKD/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Nov 2022 15:50:47 GMT -->
+</html>

@@ -1,0 +1,188 @@
+<html>
+
+<!-- Mirrored from quantumlab.nat.fau.de/Kryptographie/Forschung/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Nov 2022 15:50:46 GMT -->
+<head>
+<title>Forschung</title>
+</script>
+
+<script src="../../Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+<link href="../../Frames/Stylesheet.css" rel="stylesheet" type="text/css">
+<script src="../../Frames/Frameset_nachladen.js" type="text/javascript"></script>
+</head>
+<body onLoad='checkFrameset()'>
+<p align="center" class="Stil14"><span class="ueberschrift"><br>
+  Quantenkryptographie Kapitel 4:</span><br>
+  <span class="unterueberschrift">Ablauf, Forschung und Einzelphotonenquelle</span></p>
+<p align="left" class="Stil8">&nbsp;</p>
+<p align="justify" class="text-normal">Im letzten Kapitel zur <a href="../QKD-Einfuehrung/index.html">Schl&uuml;sselverteilung</a> mit zwei Basen wurde gezeigt, dass das System mit einzelnen Photonen durch die Entdeckung von m&ouml;glichen Spionen eine Sicherheit von 100% bietet. Auf dieser Seite wird in kurzen Abschnitten das Grundlagenwissen der letzen Kapitel vertieft. </p>
+<p align="justify" class="text-normal"><br>
+</p>
+<blockquote>
+  <table width="100%" border="0">
+    <tr>
+      <td colspan="2" class="text-ueberschrift">Vertiefung Grundlagen:</td>
+    </tr>
+    <tr>
+      <td width="11%" class="text-normal">Abschnitt 1:</td>
+      <td width="89%" class="text-normal"><a href="#Ablauf">Der genaue Ablauf der Quantenkryptographie</a></td>
+    </tr>
+    <tr>
+      <td class="text-normal">Abschnitt 2:</td>
+      <td class="text-normal"><a href="#Entwicklung">Vom ersten Vorschlag bis zur aktuellen Forschung</a></td>
+    </tr>
+    <tr>
+      <td class="text-normal"> Abschnitt 3:</td>
+      <td class="text-normal"><a href="#Freistrahlstrecke">Verbindung &uuml;ber Freistrahlstrecke  oder Glasfaserkabel?</a></td>
+    </tr>
+    <tr>
+      <td class="Stil8">&nbsp;</td>
+      <td class="Stil8">&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="2" class="text-ueberschrift">Vertiefung Fortgeschritten:</td>
+    </tr>
+    <tr>
+      <td class="text-normal">Abschnitt 4:</td>
+      <td class="text-normal"><a href="#Phase">Kodierung der Photonen &uuml;ber die Phase</a></td>
+    </tr>
+    <tr>
+      <td class="text-normal">Abschnitt 5:</td>
+      <td class="text-normal"><a href="#Einzelphotonenquelle">Die  Einzelphotonenquelle im Demonstrationsexperiment</a></td>
+    </tr>
+    <tr>
+      <td class="text-normal">Abschnitt 6:</td>
+      <td class="text-normal"><a href="#Koinzidenzen">Koinzidenzen im Demonstrationsexperiment</a></td>
+    </tr>
+  </table>
+</blockquote>
+<table width="100%" border="0">
+  <tr></tr>
+</table>
+<p align="justify" class="text-normal"><a name="Ablauf" id="Ablauf"></a></p>
+<p align="justify" class="Stil8">&nbsp;</p>
+<p align="justify" class="Stil8">&nbsp;</p>
+<p align="left" class="text-ueberschrift">Abschnitt 1: Der genaue Ablauf bei der Quantenkryptographie</p>
+<blockquote>
+  <p align="justify" class="text-normal">Um die Quantenkryptographie von Anfang an sicher zu machen, muss der folgende Ablauf f&uuml;r das BB84-Protokoll genau eingehalten werden:</p>
+  <table width="100%" border="1" bordercolor="#333333">
+    <tr>
+      <td width="9%" height="77" bordercolor="#999999" bgcolor="#FFFFFF" class="text-normal">Schritt 1</td>
+      <td width="25%" bordercolor="#999999" bgcolor="#FFFFFF" class="text-normal">Authentifizierung</td>
+      <td width="66%" bordercolor="#999999" bgcolor="#FFFFFF" class="Stil8"><div align="justify" class="text-normal">Alice und Bob tauschen am Anfang mit einzelnen Photonen einen vorher festgelegten Schl&uuml;ssel aus. Dieser vorher festgelegte Schl&uuml;ssel  garantiert, dass wirklich nur die beiden direkt miteinander kommunizieren. Wenn der &uuml;bertragene Schl&uuml;ssel nicht &uuml;bereinstimmt, hat sich Eve direkt eingeschlichen und t&auml;uscht Alice die Anwesenheit von Bob vor. Genauso t&auml;uscht sie Bob die Anwesenheit von Alice vor.</div></td>
+    </tr>
+    <tr>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="text-normal">Schritt 2</td>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="text-normal">Schl&uuml;ssel&uuml;bertragung</td>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="Stil8"><div align="justify" class="text-normal">Alice und Bob w&auml;hlen zuf&auml;llig die Basen und &uuml;bertragen den Schl&uuml;ssel mit einzelnen Photonen. Danach wird die eigentliche &Uuml;bertragung abgeschlossen.</div></td>
+    </tr>
+    <tr>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="text-normal">Schritt 3</td>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="text-normal">L&ouml;schung falscher Basen</td>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="Stil8"><div align="justify" class="text-normal">Alice und Bob kommunizieren &ouml;ffentlich, um die Messungen mit den unterschiedlichen Basen zu l&ouml;schen. Dabei verraten beide nur die Basen und nicht die &uuml;bertragenen und gemessenen Bits. </div></td>
+    </tr>
+    <tr>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="text-normal">Schritt 4</td>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="text-normal">Test auf Spion</td>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="Stil8"><div align="justify" class="text-normal">Alice und Bob vergleichen einige der &uuml;bertragenen Bits mit der gleichen Basis. Wenn die Fehlerrate &uuml;ber 25% liegt, war auf jeden Fall ein Spion in der Leitung und der &uuml;bertragene Schl&uuml;ssel wird gel&ouml;scht. Die Bits zum Testen der Anwesenheit eines Spions werden aus dem eigentlichen Schl&uuml;ssel gel&ouml;scht.</div></td>
+    </tr>
+    <tr>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="text-normal">Schritt 5</td>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="text-normal">Filtern der Fehler</td>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="Stil8"><div align="justify" class="text-normal">Aufgrund von Messfehlern sind nicht alle Bits bei gleicher Basenwahl exakt  gleich. Mit Algrorithmen zur Fehlerkorrektur (z. B. Parit&auml;tstest) werden diese fehlerhaften Bits herausgefiltert. Der Schl&uuml;ssel wird durch diese Tests zwar reduziert, aber ist fehlerfrei. Zus&auml;tzlich werden noch verschiedene Algortihmen angewandt, um die Sicherheit des Schl&uuml;ssels zu erh&ouml;hen (Privatssph&auml;renverst&auml;rkung).</div></td>
+    </tr>
+    <tr>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="text-normal">Schritt 6</td>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="text-normal">Code zur Authentifizierung</td>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="Stil8"><div align="justify" class="text-normal">Am Ende der Schl&uuml;sselerzeugung wird von den &uuml;bertragenen und gefilterten Daten einige Bits herausgenommen. Diese Bits werden beim n&auml;chsten Start des Quantenkryptographiesystems als Authentifizierung verwendet.</div></td>
+    </tr>
+    <tr>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="text-normal">Schritt 7</td>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="text-normal">Verschl&uuml;sseln der Nachricht</td>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="Stil8"><div align="justify" class="text-normal">Erst jetzt verschl&uuml;sselt Alice die eigentliche und sensible Nachricht mit dem generierten Schl&uuml;ssel &uuml;ber die bin&auml;re Addition.</div></td>
+    </tr>
+    <tr>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="text-normal">Schritt 8</td>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="text-normal">Versenden der Nachricht</td>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="Stil8"><div align="justify" class="text-normal">Die verschl&uuml;sselte Nachricht wird nun &ouml;ffentlich von Alice an Bob verschickt.</div></td>
+    </tr>
+    <tr>
+      <td height="42" bordercolor="#999999" bgcolor="#FFFFFF" class="text-normal">Schritt 9</td>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="text-normal">Entschl&uuml;sseln der Nachricht</td>
+      <td bordercolor="#999999" bgcolor="#FFFFFF" class="Stil8"><p align="justify" class="text-normal">Bob entschl&uuml;sselt die geheime Nachricht mit seinem Schl&uuml;ssel &uuml;ber die bin&auml;re Addition.
+      Mit dem oben eingehaltenen Prozdere war die Verschl&uuml;sselung zu 100% sicher.</p></td>
+    </tr>
+  </table>
+  <p align="justify" class="text-normal"><br>
+  Die Schritte 1-6 dienen nur der Erzeugung eines geheimen Schl&uuml;ssels mit Hilfe der Quantenphysik. Da am Anfang zur Authentifizierung schon immer ein Schl&uuml;sselteil &uuml;bertragen wird (Schritt 1) handelt es sich bei diesem Verfahren eigentlich nur um ein Schl&uuml;sselwachstum. Erst im Schritt 7-9 findet die eigentliche Kryptographie statt, bei der  die Quantenphysik  nicht mehr ben&ouml;tigt wird. Das gesamte System kann mit Hilfe von Quantenzufallsgeneratoren und elektrooptischen Polarisationsdrehern vollautomatisch betrieben werden. Die Datenraten in den kommerziell erh&auml;ltlichen Quantenkryptographieystemen mit Glasfaserkabel betragen momentan bei einer Reichweite von 25km ca. 1,5 kBit/s [IdQ08].<br>
+    <a name="Entwicklung" id="Ablauf2"></a></p>
+</blockquote>
+<p align="justify" class="Stil8">&nbsp;</p>
+<p align="justify" class="Stil8">&nbsp;</p>
+<p align="left" class="text-ueberschrift">Abschnitt 2: Vom ersten Vorschlag bis zur aktuellen Forschung</p>
+<blockquote>
+  <p align="justify" class="text-normal">Der erste theoretische Vorschlag zur Quantenkryptographie wurde 1984  von	den Wissenschaftlern Bennet und Brassard ver&ouml;ffentlicht [Ben84]. Der Vorschlag wird seither als  BB84-Prokotoll bezeichnet. 1992 wurde das vorgeschlagene Prokotoll  zum ersten Mal experimentell mit einer Freistrahlstrecke von 30cm realisiert [Ben92].  Bereits im Jahr 2001 wurde ein System mit einer Reichweite von 1,9km und einer Roh-Datenrate von 33kBit/s getestet [Rar01].  Im Jahr 2002 gelang es einer Forschergruppe aus M&uuml;nchen den Schl&uuml;ssel von der Zugspitze zur Karwendelspitze   sicher zu &uuml;bertragen [Kur02]. Die &Uuml;bertragungsstrecke betrug hier  23,4km in klarer und turbulenzfreier H&ouml;henluft. Das gleiche System wurde im Jahr 2006 &uuml;ber den D&auml;chern von M&uuml;nchen in turbulenter und verschmutzter Stadtluft mit einer &Uuml;bertragungsstrecke von 480m getestet [Wei06].  Im Jahr 2007  gelang die sichere Schl&uuml;sselverteilung zwischen den Inseln La Palma und Teneriffa [Sch07]. Der &Uuml;bertragungsweg betrug hier 144km in klarer Meeresluft.<br>
+      <a name="Freistrahlstrecke" id="Ablauf3"></a></p>
+</blockquote>
+<p align="justify" class="Stil8">&nbsp;</p>
+<p align="justify" class="Stil8">&nbsp;</p>
+<p align="justify" class="text-ueberschrift">Abschnitt 3: Verbindung &uuml;ber Freistrahlstrecke  oder Glasfaserkabel?</p>
+<blockquote>
+  <p align="justify" class="text-normal"> Die bisher beschriebenen  Quantenkryptographiesysteme verwendeten als Kodierung die Polarisation (vertikal polarisiert = 0, horizontal polarisiert = 1). Die Systeme funktionieren reibungslos bei freier und direkter Sichtverbindung zwischen Sender und Empf&auml;nger. Wenn starker Nebel, viel Staub oder Smog in der Luft liegt werden die meisten Photonen bei der &Uuml;bertragung gestreut und kommen nicht mehr beim Empf&auml;nger an. Die Kryptographiesysteme werden duch diese nat&uuml;rlichen Umwelteinfl&uuml;sse  in der &Uuml;bertragungsrate stark  reduziert oder k&ouml;nnen sogar gar nicht mehr eingesetzt werden.
+    F&uuml;r die allt&auml;gliche Kommunikation sollte  die &Uuml;bertragungsstrecke unabh&auml;ngig von Umwelteinfl&uuml;ssen sein. Am geeignetsten sind hierzu  Glasfaserkabel, die unterirdisch verlegt werden k&ouml;nnen.  Normale Glasfaserkabel haben jedoch die Eigenschaft, dass die Polarisaiton nicht erhalten bleibt. Je nach Biegung oder Streckung der Glasfaser ver&auml;ndert sich die Polarisation von Licht.  F&uuml;r die Quantenkryptographie mit Polarisationskodierung sind frei verlegte Glasfaserkabel somit nicht geeignet. Eine Alternative bietet die  Kodierung der Photonen &uuml;ber der Phase, da sich diese  in Glasfaserkabeln nicht &auml;ndert. Die im <a href="#Ablauf">oberen Abschnitt</a> beschriebenen Schritte zum Ablauf der Quantenkryptographie sind  f&uuml;r die Phasenkodierung die gleichen wie bei der Polarisationskodierung.<br>
+    <a name="Phase" id="Ablauf4"></a></p>
+</blockquote>
+<p align="justify" class="Stil8">&nbsp;</p>
+<p align="justify" class="Stil8">&nbsp;</p>
+<p align="justify" class="text-ueberschrift">Vertiefung Fortgeschritten:<br>
+  <br>
+</p>
+<p align="justify" class="text-ueberschrift">Abschnitt 4: Kodierung der Photonen &uuml;ber die Phase</p>
+<blockquote>
+  <p align="justify" class="text-normal">Anstatt  Photonen &uuml;ber die Polarisation zu kodieren, kann als Kodierung auch die Phase &phi; der Photonen  verwendet werden. Das System zur Quantenkryptographie &uuml;ber die Phase &phi;  funktioniert &uuml;ber das Quantenph&auml;nomen <a href="../../Interferenz/index.html">Einzelphotoneninterferenz</a> im Interferometer. F&uuml;r die Quantenkryptographie mit Phasenkodierung wird ein gro&szlig;es Mach-Zehnder Interferometer in zwei Interferometer aufgeteilt. Ein Interferomteter steht  bei Alice und ein Interferometer steht bei Bob (Abb. 1). In jedem Interferometer wird die Phase &uuml;ber ein zus&auml;tzliches optisches Element in einem Interferometerarm ge&auml;ndert. </p>
+  <p align="justify" class="text-normal">Der Phasenunterschied &Delta;&phi; = &phi;Alice - &phi;Bob der beiden Interferometer wird zur eindeutigen Informations&uuml;bertragung genutzt. Der Phasenunterschied &Delta;&phi;=0 entspricht der bin&auml;ren &quot;0&quot;, der Phasenunterschied &Delta;&phi;=&pi; entspricht der bin&auml;ren &quot;1&quot;. Das gesamte System der Quantenkryptographie &uuml;ber die Phase ben&ouml;tigt pr&auml;zise interferometrische Stabilit&auml;t. </p>
+  <p align="justify" class="Stil8">&nbsp;</p>
+  <p align="center" class="text-normal"><img src="SchemaQKD.jpg" width="750" height="251"><br>
+  Abb. 1: Quantenkryptographie mit einzelnen Photonen und Phasenkodierung</p>
+  <p align="justify" class="Stil8">&nbsp;</p>
+  <p align="justify" class="text-normal">Da die Phase der einzelnen Photonen in einer Glasfaser nicht ver&auml;ndert wird, kann die &Uuml;bertragung zwischen Alice und Bob in normalen Glasfaserkabel erfolgen. Eine direkte Sichtverbindung wie bei der Polarisationskodierung ist nicht erforderlich. Erste Systeme wurden 2002 in der Schweiz zwischen den St&auml;dten Lausanne und Genf  getestet [Stu02]. Das Glasfaserkabel zwischen den St&auml;dten hatte bei diesem Experiment eine L&auml;nge von 67km. &quot;Plug- and Play&quot; - Systeme zur Quantenkryptographie &uuml;ber die Phase sind bereits heute  mit Glasfaserkabel kommerziell erh&auml;ltlich  [IdQ08]. In der Schweiz werden solche  Systeme zur &Uuml;bertragung von wichtigen Informationen  bereits serienm&auml;&szlig;ig eingesetzt [Pat07].</p>
+  <p align="justify" class="text-normal">Neben den hier beschrieben Quantenkryptographiesystemen mit jeweils einem einzelnen Photon  gibt es auch Systeme der Quantenkryptographie mit <a href="../../Verschraenkung/index.html">verschr&auml;nkten_Photonenpaaren</a> [Eke91] oder mit kontinuierlichen Variablen [Ral00]. Die  Quantenkyptorgaphie mit verschr&auml;nkten Photonenpaaren wird im n&auml;chsten Kapitel ausf&uuml;hrlich erl&auml;utert <a href="../V-QKD/index.html">(Kapitel_5</a>). Einen fachlich anspruchsvollen aber sehr guten &Uuml;berblick &uuml;ber die Systeme zur Quantenkryptographie und dem Stand der aktuellen Forschung bieten die &Uuml;bersichtsartikel von Gisin und Tittel [Gis02] oder von Lo und L&uuml;tkenhaus [Lo07].<br>
+      <a name="Einzelphotonenquelle" id="Ablauf5"></a></p>
+  <p align="justify" class="Stil8">&nbsp;</p>
+</blockquote>
+<p align="justify" class="Stil8">&nbsp;</p>
+<p align="justify" class="text-ueberschrift">Abschnitt 5: Die  Einzelphotonenquelle im Demonstrationsexperiment</p>
+<blockquote>
+  <p align="justify" class="text-normal">Die Sicherheit des Quantenkryptographiesystem ist  nur dann gegeben, wenn pro Puls  ein einzelnes Photonen &uuml;bertragen wird.   An der Einzelphotonenquelle auf Knopfdruck wird allerdings noch intensiv geforscht.  F&uuml;r unser Demonstrationsexperiment der Quantenkryptographie (siehe <a href="../QKD-Einfuehrung/index.html">Kapitel 2</a> und <a href="../QKD/index.html">3</a>) verwenden wir eine Photonenpaarquelle,  die &uuml;ber einen Trigger einzelne Photonen ank&uuml;ndigt (Abb. 2).  Diese Photonenpaarquelle ist ausf&uuml;hrlich mit der Angabe der genauen Photonenstatistik im Kapitel <a href="../Existenz/index.html">Existenz_des_Photons</a> beschrieben. Das eine Photon des Photonenpaares aus dem Kristall wird zum Triggern genutzt, das andere Photon wird in ein polarisationserhaltendes Glasfaserkabel eingekoppelt und zum eigentlichen Quantenkryptographiesystem geleitet. In unserem Experiment sendet der blaue gepulste Laser (405nm) zum Erzeugen der Photonenpaare auf Knopfdruck einen einzelnen Puls aus.  Nach jedem einzelnen Laserpuls muss die Richtung der Polarisationsdreher im Quantenkryptographiesystem  neu eingestellt werden, da immer ein Photon vorhanden sein kann. F&uuml;r die interaktiven Experimente wurden alle Datens&auml;tze gel&ouml;scht, in denen keine Koinzidenzereignisse vorhanden waren. Alternativ kann die angek&uuml;ndigte Einzelphotonenquelle durch eine Einzelphotonenquelle mit Farbzentrum ersetzt werden [Bev02].</p>
+
+  <p align="justify" class="Stil8">&nbsp;</p>
+  <p align="center" class="text-normal"><img src="QuelleII.jpg" alt="fs" width="512" height="334"></p>
+  <p align="center" class="text-normal">Abb. 2: Photonenpaarquelle f&uuml;r die Quantenkryptographie<br>
+    linker Zweig: Detektor zum Triggern, rechter Zweig: Einkopplung in  Glasfaserkabel</p>
+  <p align="justify" class="text-normal"><br>
+  Bei den  im <a href="#Entwicklung">oberen Abschnitt</a> erw&auml;hnten  Experimenten mit Freistrahlstrcken bis zu 144km werden f&uuml;r das BB84 Protokoll abgeschw&auml;chte Laserpulse verwendet. Diese einzelnen Laserpulse k&ouml;nnen  jedoch   zwei oder mehr Photonen enthalten. Ein Spion kann hier unbemerkt aus jedem &uuml;bertragenen Puls  einzelne Photonen mit Hilfe eines Strahlteilers herausholen und unbemerkt messen.  Die Sicherheit der sicheren Schl&uuml;ssel&uuml;bertragung wird aufgrund dieser Strahlteilerattacke erheblich reduziert. M&ouml;gliche L&ouml;sungen der Strahlteilerattacke sind Decoy-State Protokolle. Bei diesen Decoy-State Protokollen (Decoy engl. Falle) werden neben den normalen Pulsen zur Informations&uuml;bertragung zus&auml;tzliche Pulse  ausgesendet. Mit Hilfe dieser zus&auml;tzlichen Pulse kann,  z. B. durch die  Messung der <a href="../Existenz/index.html#Zugang4">Photonenstatistik</a>,  eine  solche Strahlteilerattacke  festgestellt werden  [Hwa03], [Zha06], [Mau07].<br>
+    <a name="Koinzidenzen" id="Ablauf6"></a></p>
+</blockquote>
+<p align="justify" class="Stil8">&nbsp;</p>
+<p align="justify" class="Stil8">&nbsp;</p>
+<p align="justify" class="text-ueberschrift">Abschnitt 6: Koinzidenzen im Demonstrationsexperiment</p>
+<blockquote>
+  <p align="justify" class="text-normal">In	unseren interaktiven Demonstrationsexperimenten zur Quantenkryptographie (siehe <a href="../QKD-Einfuehrung/index.html">Kapitel 2</a> und <a href="../QKD/index.html">3</a>) wird jedes gesendete Photon registriert. Dies wird in unserem realen Demostrationsexperiment erreicht, indem der blaue 405nm Laser vor dem Kristall nach der Bet&auml;tigung des Tasters &quot;Einzelmessung&quot; so lange einzelne Pulse aussendet, bis eine Koinzidenz zwischen dem Trigger Detektor und einem  Detektor hinter dem Strahlteiler registriert wird. Danach geht der gepulste Laser in den Ruhezustand und kann wieder &uuml;ber den Taster gestartet werden. Die gemessene Koinzidenz wir &uuml;ber die Lampen auf den Detektoren angzeigt. W&uuml;rde der Laser bei jedem Knopfdruck nur einen einzelnen Lichtpuls aussenden, so g&auml;be es sehr oft keine Koinzidenz, bzw. nur eine einzelne Detektion bei dem Triggerdetektor oder bei den Detektoren hinter dem Strahlteiler. Die Lampen w&uuml;rden bei den meisten Tastendr&uuml;cken f&uuml;r Einzelpulse dunkel bleiben. Dies liegt an der geringen Konversionseffizienz im Kristall, an der nicht optimalen Einkopplung in Glasfaserkabel, an der Streuung der Photonen auf dem &Uuml;bertragungsweg und an der geringen Detektoreneffizienz. F&uuml;r die richtige Anwendung muss nach jedem einzelnen Laserpuls die Richtung der Polarisationsdreher zuf&auml;llig ge&auml;ndert werden. Um das Prinzip der Quantenkryptographie allgemein verst&auml;ndlich zu machen, umgehen wir diese Probleme durch wiederholende Laserpulse bis eine Koinzidenz erfolgt. <br>
+  </p>
+</blockquote>
+<blockquote>
+  <p align="justify" class="Stil8"></p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+</blockquote>
+<p align="left" class="text-normal">Zum Kapitel 5: Quantenkryptographie mit verschr&auml;nkten Photonen  [<a href="../V-QKD/index.html">klick</a>]<br>
+  <br>
+Zur&uuml;ck zur &Uuml;bersicht [<a href="../index.html">klick</a>]</p>
+<p align="left" class="Stil8">&nbsp;</p>
+<p align="left" class="notizen">Autor: P. Bronner, August 2008</p>
+<blockquote>&nbsp;</blockquote>
+<span class="notizen"><img alt="" src="http://www.didaktik.physik.uni-erlangen.de/quantumlab/Homepagestatistik/aufruf.php?name=Kryptographie-Forschung-index.html&amp;lng=deutsch"></span>
+</body>
+
+
+<!-- Mirrored from quantumlab.nat.fau.de/Kryptographie/Forschung/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Nov 2022 15:50:46 GMT -->
+</html>

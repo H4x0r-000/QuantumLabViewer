@@ -1,0 +1,2 @@
+call apply_patch_drogon.bat
+call apply_patch_vcruntime.bat

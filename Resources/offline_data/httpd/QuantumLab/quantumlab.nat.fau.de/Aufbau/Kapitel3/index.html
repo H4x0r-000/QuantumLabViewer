@@ -1,0 +1,61 @@
+<html>
+
+<!-- Mirrored from quantumlab.nat.fau.de/Aufbau/Kapitel3/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Nov 2022 15:50:29 GMT -->
+<head>
+<title>Aufbau</title>
+</script>
+
+<script src="../Scripts/AC_RunActiveContent.html" type="text/javascript"></script>
+<link href="../../Frames/Stylesheet.css" rel="stylesheet" type="text/css">
+<script src="../../Frames/Frameset_nachladen.js" type="text/javascript"></script>
+</head>
+<body onLoad='checkFrameset()'>
+<p align="center" class="Stil10">	<span class="ueberschrift"><br>
+Aufbau eines quantenoptischen Experimentes</span><br>
+<span class="unterueberschrift">Kapitel 3: Detektoren und Datenauswertung</span></p>
+<p align="center" class="Stil9">&nbsp;</p>
+<p align="justify" class="text-normal">Auf dem optischen Tisch werden die erzeugten Photonen in Glasfaserkabel eingekoppelt und zum Detektor geleitet. Der Detektor steht dabei unter dem optischen Tisch. Die elektrischen Signale m&uuml;ssen f&uuml;r ein Ausbildungsexperiment in Echtzeit (2-5ns) ausgewertet mit speziellen Methoden der Datenauswertung bearbeitet werden. Auf dieser Seite werden die Detektoren und die Methoden der Datenauswertung vorgestellt.</p>
+<p align="justify" class="Stil8">&nbsp;</p>
+<p class="text-ueberschrift"><strong>Detektoren f&uuml;r einzelne Photonen:</strong></p>
+<blockquote>
+  <p align="justify" class="text-normal">Der beste Detektor zum Nachweis von Licht ist unser menschliches Auge. Wir k&ouml;nnen sofort sagen, ob Licht in unser Auge f&auml;llt, wie intensiv es ist und welche Farbe es hat. Die St&auml;bchen in unserem Auge sind sogar in der Lage einzelne Photonen zu registrieren [Bay79]. Durch unser neuronales System wird jedoch erst ein Signal von den St&auml;bchen aus an das Gehirn weitergegeben, wenn mindestens ca. 9 Photonen pro 100ms vorhanden sind. Ein weiterer Verlust kommt dadurch zustande, dass  nur 10% aller im Auge eintreffenden Photonen die Netzhaut erreichen [Hec42].  Pauschal kann man sagen, dass unser Auge eine Photonenrate von 900 Photonen pro Sekunde ben&ouml;tigt, um einen Spannungspuls an das Gehirn zu senden. Zum Nachweis von einzelnen Photonen ist das Gesamtsystem &quot;Auge&quot; somit nicht geeignet.<br>
+  </p>
+  <p align="justify" class="text-normal">Im Labor werden   zum Nachweis von einzelnen Photonen Avalanche-Photodioden  verwendet.  Es sind bin&auml;re Detektoren (1 oder 0), die nur feststellen k&ouml;nnen, ob etwas ankam &quot;1&quot; oder nicht &quot;0&quot; - zu mehr k&ouml;nnen diese Detektoren nicht genutzt werden. Es ist keine Aussage m&ouml;glich, welche Wellenl&auml;nge die Photonen hatten oder wie viele Photonen registriert wurden.  Problematisch ist auch, dass die Detektoren ca. 1000 mal pro Sekunde ein Ereignis registrieren, trotz absoluter Dunkelheit (Dunkelrauschen). Die Effizienz der Detektoren ist bei einer Wellenl&auml;nge von 810 nm ca. 50%. Von 100 eintreffenden Photonen werden somit nur 50 Photonen durch die Detektoren registriert. Nach einer Detektion sind die Detektoren ca.  50ns &quot;blind&quot;. Mit verschiedenen Tricks kann man diese Unzul&auml;nglichkeiten der Detektoren umgehen. Mit einem gepulsten Laser k&ouml;nnen z. B. Zeitfenster definiert werden, in denen Ereignisse &uuml;berhaupt m&ouml;glich sind. Die gemessenen Z&auml;hlraten lassen  sich in die tats&auml;chlichen Photonenraten umrechnen. In unserem Quantenoptik-Labor  werden vier Einzelphotonendetektoren verwendet, die &uuml;ber Glasfaserkabeln mit dem Experiment verbunden sind  (Abb. 1).  Jeder Detektor kann  max. 1 Million Ereignisse pro Sekunde registrieren und ist  dreifach gegen &Uuml;berlastung bei zu hohen Ereignisraten gesch&uuml;tzt.</p>
+</blockquote>
+<p class="Stil8">&nbsp;</p>
+<p align="center" class="text-normal"><img src="APD-DetektorI.jpg" alt="APD-Detektor" width="410" height="277"><br>
+  <br>
+  Abb. 1: Vier Einzelphotonendetektoren mit einem Glasfaserkabel<br>
+</p>
+<p align="center" class="text-normal"><br>
+</p>
+<p class="Stil8">&nbsp;</p>
+<p class="text-ueberschrift"><strong>Datenerfassung:</strong></p>
+<blockquote>
+  <p align="justify" class="text-normal">Die elektrischen Daten des Detektors m&uuml;ssen in Echtzeit gefiltert und analysiert werden. Hat ein Detektor ein Ereignis registriert, obwohl kein Laserpuls vorhanden war, so wird das Ereignis im Datenstrom herausgefiltert und gel&ouml;scht. Wenn ein echtes Detektorenereignis diesen Filter durchlaufen hat, so muss geschaut werden, ob gleichzeitig zwei Detekorereignisse aufgetreten sind. Zwei Detektorsignale werden als gleichzeitig akzeptiert, wenn sie mit weniger als 4ns Verz&ouml;gerung auftreten. Ein solches gleichzeitiges Ereignis nennt man Koinzidenz. Die Filterung der Daten und die Analyse der Koinzidenz sollte f&uuml;r ein Ausbildungslabor in Echtzeit erfolgen. </p>
+  <p align="justify" class="text-normal"> Die gebr&auml;uchlichen Bausteine zur Echtzeitdatenauswertung  aus der Teilchenphysik (Abb. 2 links) haben wir durch einen programmierbaren Zeit-Digital-Wandler ersetzt (Abb. 2 rechts).  Mit dieser Datenerfassung kann eine Koinzidenz zweier Ereignisse mit bis zu 0,08ns Verz&ouml;gerung unterschieden werden. Die verschiedenen Signale der Detektoren werden direkt &uuml;ber die Software und nicht mehr &uuml;ber Kabell&auml;ngen abgeglichen. Aufgrund der Rechenleistung unseres Computers darf die Datenrate f&uuml;r die Echtzeitdatenauswertung momentan 200kHz nicht &uuml;berschreiten. F&uuml;r didaktische Zwecke kommt es uns aber nicht auf eine m&ouml;glichst hohe Datenraten oder eine hohe Detektoreffizienz  an, sondern auf einfache und kosteng&uuml;nstige Versuchsaufbauten. Mit weiteren Vereinfachungen und erwarteten Preissenkungen (Detektoren, Laser) k&ouml;nnen die Realexperimente zuk&uuml;nftig an Universit&auml;ten und in Schulzentren eingesetzt werden, was bisher noch nicht &uuml;blich ist. Die kontinuierliche Datenrate kann direkt am Computerbildschirm in Ereignisse pro Sekunde abgelesen werden.</p>
+  <p align="justify" class="Stil8">&nbsp;</p>
+</blockquote>
+<p align="center" class="text-normal"><img src="Datenerfassung.jpg" alt="Datenerfassung" width="619" height="267"><br>
+  <br>
+  Abb. 2 links: Datenerfassung mit Logikbausteinen aus der Teilchenphysik<br>
+Abb. 2 rechts: Neue Datenerfassung &uuml;ber Zeit-Digital-Wandler und Software</p>
+<p align="center" class="Stil8">&nbsp;</p>
+<blockquote>
+  <p align="justify" class="text-normal">Mit dem Zeit-Digital Wandler k&ouml;nnen  aus dem Datenstrom Einzeldaten herausgegriffen werden, und  &uuml;ber  Lampen auf den schwarzen Boxen (Abb. 3) angezeigt werden. Genauso ist es m&ouml;glich nur einzelne Laserpulse zu starten, bis eine einzelne Detektion erfolgt, die wiederum &uuml;ber die Lampen angezeigt wird. Diese Methode der Datenauswertung wird als &quot;Auswertung mit Einzelereignissen&quot; bezeichnet.</p>
+  <p align="justify" class="Stil8">&nbsp;</p>
+  <p align="center" class="text-normal"><img src="Detektoren.jpg" width="542" height="360"></p>
+  <p align="center" class="text-normal">Abb. 3: Anzeige von Einzeldaten mit LED&acute;s auf den Boxen zur Einkopplung</p>
+  <p align="center" class="Stil8">&nbsp;</p>
+  <p align="center" class="Stil8">&nbsp;</p>
+</blockquote>
+<p align="left" class="text-normal">Zur&uuml;ck zur &Uuml;bersicht [<a href="../index.html">klick</a>]</p>
+<p align="left" class="Stil8">&nbsp;</p>
+<p align="left" class="notizen">Autor: P. Bronner, A. Strunz, April 2008</p>
+<p align="center" class="Stil8">&nbsp;</p>
+<span class="notizen"><img alt="" src="http://www.didaktik.physik.uni-erlangen.de/quantumlab/Homepagestatistik/aufruf.php?name=Aufbau-Kapitel3.html&amp;lng=deutsch"></span>
+</body>
+
+
+<!-- Mirrored from quantumlab.nat.fau.de/Aufbau/Kapitel3/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Nov 2022 15:50:30 GMT -->
+</html>

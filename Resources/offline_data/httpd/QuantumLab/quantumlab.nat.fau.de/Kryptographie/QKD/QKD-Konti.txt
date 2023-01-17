@@ -1,0 +1,41 @@
+# Quantenoptiklabor: Experiment Quantenkryptographie kontinuierliche Datenrate für die Statistik
+# Messung vom 08.07.2008
+# Aufnahme von bei jeder Winkeleinstellung von 50 Messungen zu je einer Sekunde. Laserleistung gepulst: 30yW
+# Polarisation der einzelnen Photonen am Anfang: Vertikal
+# Der Datensatz aus dem Experiment kann z.B. zum Auswerten in Excel importiert werden
+
+ 
+# Didaktik der Physik, Universität Erlangen
+
+
+# Achsenbeschriftung:
+# Triggerdetektor [Hz]; StabwT [Hz]; Transmittiert [Hz]; Stabw T [Hz]; Reflektiert [Hz]; Stabw R[Hz]; CC Trigger-Transmittiert [Hz]; Stabw Trigger-T [Hz]; CC Trigger-Ref [Hz]; Stabw T-R; Messzeit 
+
+# Alice 0° Bob 0°
+27891,94000;	153,35133;	82,66000;	11,51505;	2773,34000;	66,42738;	3,70000;	1,61940;	519,78000;	18,97828;	
+
+# Alice 0° Bob 45°
+28069,88000;	173,37003;	1378,70000;	38,67987;	1380,16000;	37,26209;	246,98000;	13,98759;	250,08000;	13,67082;	
+
+# Alice 90° Bob 0°
+27834,10000;	180,43409;	2575,82000;	49,43298;	94,40000;	13,27880;	475,58000;	26,54153;	3,84000;	1,99346;	
+
+# Alice 90° Bob 45°
+28075,34000;	182,27694;	1365,06000;	40,02418;	1419,96000;	36,69119;	245,74000;	15,76202;	258,58000;	14,08442;	
+
+# Alice -45° Bob: 0°
+28264,28000;	176,73248;	1441,50000;	33,73985;	1369,58000;	39,16271;	258,74000;	13,89731;	248,46000;	14,94508;	
+
+# Alice -45° Bob 45°
+28059,00000;	210,97384;	2569,18000;	57,16774;	84,88000;	9,16658;	473,04000;	25,82276;	3,68000;	1,80068;	
+
+# Alice 45° Bob 0°
+28496,36000;	177,82527;	1372,24000;	42,86693;	1444,80000;	37,65092;	246,66000;	15,40158;	264,94000;	15,74077;	
+
+# Alice 45° Bob 45°
+28506,86000;	167,56394;	86,42000;	10,85919;	2892,36000;	54,67744;	2,46000;	1,55459;	537,04000;	22,77840;	
+
+
+
+# Darkcounts: Nur Quantenkanal gesperrt:
+24764,40000;	150,33975;	163,84000;	13,17753;	168,82000;	12,64700;	0,16000;	0,37033;	0,26000;	0,48697;	

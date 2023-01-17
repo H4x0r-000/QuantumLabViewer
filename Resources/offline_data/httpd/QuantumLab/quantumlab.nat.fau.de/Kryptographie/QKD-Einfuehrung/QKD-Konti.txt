@@ -1,0 +1,21 @@
+# Quantenoptiklabor: Experiment Quantenkryptographie kontinuierliche Datenrate für die Statistik
+# Messung vom 08.07.2008
+# Aufnahme von bei jeder Winkeleinstellung von 50 Messungen zu je einer Sekunde. Laserleistung gepulst: 30yW
+# Polarisation der einzelnen Photonen am Anfang: Vertikal
+# Der Datensatz aus dem Experiment kann z.B. zum Auswerten in Excel importiert werden
+
+ 
+# Didaktik der Physik, Universität Erlangen
+
+
+# Achsenbeschriftung:
+# Triggerdetektor [Hz]; StabwT [Hz]; Transmittiert [Hz]; Stabw T [Hz]; Reflektiert [Hz]; Stabw R[Hz]; CC Trigger-Transmittiert [Hz]; Stabw Trigger-T [Hz]; CC Trigger-Ref [Hz]; Stabw T-R; Messzeit 
+
+# Alice 0°
+27891,94000;	153,35133;	82,66000;	11,51505;	2773,34000;	66,42738;	3,70000;	1,61940;	519,78000;	18,97828;	
+
+# Alice 90° 
+27834,10000;	180,43409;	2575,82000;	49,43298;	94,40000;	13,27880;	475,58000;	26,54153;	3,84000;	1,99346;	
+
+# Darkcounts: Nur Quantenkanal gesperrt:
+24764,40000;	150,33975;	163,84000;	13,17753;	168,82000;	12,64700;	0,16000;	0,37033;	0,26000;	0,48697;	
