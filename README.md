@@ -1,8 +1,8 @@
 # Disclaimer
 
-This software is a viewer for the website <a href="quantumlab.nat.fau.de">quantumlab.nat.fau.de</a> (or other Flah dependent websites) since it uses Flash to display parts of its content and newer browsers don't support Flash anymore. Therefore, all content viewed with this software in online/offline mode belongs to © Didaktik der Physik, Universität Erlangen-Nürnberg.
+This software is a viewer for the website <a href="https://quantumlab.nat.fau.de">quantumlab.nat.fau.de</a> (or other Flah dependent websites) since it uses Flash to display parts of its content and newer browsers don't support Flash anymore. Therefore, all content viewed with this software in online/offline mode belongs to © Didaktik der Physik, Universität Erlangen-Nürnberg.
 
-This repository contains a mostly complete backup of <a href="quantumlab.nat.fau.de">quantumlab.nat.fau.de</a> in case it goes offline. However, if the owner does not want the contents to be in this repo I will take it down as soon as possible. If you are one of the owners you can contact me through my github email.
+This repository contains a mostly complete backup of <a href="https://quantumlab.nat.fau.de">quantumlab.nat.fau.de</a> in case it goes offline. However, if the owner does not want the contents to be in this repo I will take it down as soon as possible. If you are one of the owners you can contact me through my github email.
 
 The source-code other than in Resources/offline_data/http/QuantumLab/quantumlab.nat.fau.de belong to me. Forking/copying/editing is allowed however credit is required and you may have to take it offline on request.
 
