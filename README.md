@@ -12,7 +12,7 @@ The files inside patch/drogon belong to the Drogon Framework Dev team and are sh
 The Viewer is based on an older version Chromium Embedded Framework to enable the usage of the Flash plugin.
 
 # Download
-You can either download the source and compile it yourself or download binaries from the <a href="">release section</a>.
+You can either download the source and compile it yourself or download binaries from the <a href="https://github.com/H4x0r-000/QuantumLabViewer/releases/latest">release section</a>.
 
 # Building
 This section explains how to build the binaries from source.
