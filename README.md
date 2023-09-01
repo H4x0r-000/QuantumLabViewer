@@ -40,7 +40,7 @@ Since all necessary drogon files are not included by default, you have to run at
 # Usage
 
 ## Startup
-To use it you can just run QuantumLabViewerLauncher.exe inside the composited/Release folder, or if you Net Framework version doesn't support it you can find an Net3.1 version of the Launcher inside composited/Release/Net3.1Launcher
+To use it you can just run QuantumLabViewerLauncher.exe inside the composited/Release folder, or if your Net Framework version doesn't support it you can find an Net3.1 version of the Launcher inside composited/Release/Net3.1Launcher
 
 Alternatively, you can run "QuantumLab Manuel Start Offline.bat" or "QuantumLab Manuel Start Online.bat" to start manually.
 
